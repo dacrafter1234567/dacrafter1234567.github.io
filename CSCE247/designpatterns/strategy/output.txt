@@ -1,0 +1,64 @@
+***** Highest Price to Lowest *****
+
+$1520.00 Green Street Crossing
+1 bedroom 1 bathroom 
+
+$1400.00 650 Lincoln
+1 bedroom 1 bathroom 
+
+$1375.00 Saga
+1 bedroom 1 bathroom 
+
+$1012.00 Green Street Crossing
+3 bedrooms 3 bathrooms 
+
+$980.00 Pulaski Square Townhomes
+3 bedrooms 3 bathrooms 
+
+$920.00 Saga
+3 bedrooms 3 bathrooms 
+
+$915.00 650 Lincoln
+3 bedrooms 3 bathrooms 
+
+$850.00 Green Street Crossing
+2 bedrooms 1 bathroom 
+
+$800.00 650 Lincoln
+2 bedrooms 1 bathroom 
+
+$799.00 Saga
+2 bedrooms 2 bathrooms 
+
+
+***** Lowest Price to Highest *****
+
+$799.00 Saga
+2 bedrooms 2 bathrooms 
+
+$800.00 650 Lincoln
+2 bedrooms 1 bathroom 
+
+$850.00 Green Street Crossing
+2 bedrooms 1 bathroom 
+
+$915.00 650 Lincoln
+3 bedrooms 3 bathrooms 
+
+$920.00 Saga
+3 bedrooms 3 bathrooms 
+
+$980.00 Pulaski Square Townhomes
+3 bedrooms 3 bathrooms 
+
+$1012.00 Green Street Crossing
+3 bedrooms 3 bathrooms 
+
+$1375.00 Saga
+1 bedroom 1 bathroom 
+
+$1400.00 650 Lincoln
+1 bedroom 1 bathroom 
+
+$1520.00 Green Street Crossing
+1 bedroom 1 bathroom 
