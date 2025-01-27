@@ -6,7 +6,7 @@ body{
 
 #content{
     background-color:rgb(54, 93, 158);
-    width: 70%;
+    width: 95%;
     margin:auto;
     padding: 5px;
     border: 1px solid darkgray;
@@ -15,6 +15,61 @@ body{
     color: rgb(215, 218, 250);
     
 }
+
+#main-content{
+    background-color:rgb(113, 152, 220);
+    padding: 10px;
+    margin: auto;
+    width: 90%;
+    border: 2px solid darkgray;
+    box-shadow: 5px 5px gray;
+    text-align: center;
+    color: rgb(215, 218, 250);
+}
+
+.column{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.col1of3{
+    background-color: rgb(211, 231, 250);
+    margin: 15px;
+}
+
+.col1of3 h3, p{
+    color: rgb(54, 93, 158);
+}
+
+.col1of3 a{
+    text-decoration: none;
+    color: rgb(54, 93, 158);
+}
+
+.col1of3 a:hover{
+    color: black;
+    font-size:larger;
+}
+
+img{
+    border: 3px solid rgb(54, 93, 158);
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 header, footer{
     background-color: rgb(208, 234, 243);
@@ -53,4 +108,22 @@ header h1 {
 }
 footer p {
     text-align: center;
+}
+
+
+
+/* Larger Resolutions */
+@media (min-width: 900px) {
+    #main-nav ul, .flex-container{
+        display:flex;
+    }
+
+    .flex-container h2{
+        margin: auto;
+    }
+
+    .col1of3{
+        flex: 1;
+    }
+
 }

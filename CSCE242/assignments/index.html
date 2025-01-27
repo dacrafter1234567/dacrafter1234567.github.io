@@ -3,31 +3,37 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
-        <title>CSCE242 Annex</title><!--hi-->
+        <title>CSCE242 Annex</title>
     </head>
 
     <body>
         <div id="content">
             <header>
-                <h1>CSCE 242: Web Design</h1>
-                <h4>Made by Collin Floyd</h4>
+                <h1>CSCE 242: Client-Server Computing</h1>
+                <h2>Collin Floyd</h2>
             </header>
-        <p>Web design is a course that introduces students to the principles of designing<br>and developing user-friendly websites with languages such as HTML, CSS, and JavaScript.</p>
-            <div id="list">
-                <ul>
-                    <li>Assignment 1: <a href="hw01/hw01.html">Basic HTML</a></li>
-                    <li>Assignment 2: <a href="hw02/hw02.html">Basic CSS</a></li>
-                    <li>Assignment 3: <a href="#">Page Layout</a></li>
-                    <li>Assignment 4: <a href="#">Main Page CSS</a></li>
-                    <li>Assignment 5: <a href="#">Recreate CSS Page</a></li>
-                    <li>Assignment 6: <a href="#">Main Page Projects Section</a></li>
-                    <li>Assignment 7: <a href="#">JavaScript</a></li>
-                    <li>Assignment 8: <a href="#">Conditionals</a></li>
-                    <li>Assignment 9: <a href="#">Loops</a></li>
-                    <li>Assignment 10: <a href="#">Arrays</a></li>
-                    <li>Assignment 11: <a href="#">Classes</a></li>
-                </ul>
-            </div>
         </div>
+        <main id="main-content">
+            <div class="flex-container">
+                <h2>Assignments:</h2>
+            </div>
+            <div class="flex-container">
+                <section class="col1of3 column">
+                    <h3><a href="hw01/hw01.html">Assignment 1 - Basic HTML</a></h3>
+                    <img src="images/HW1.png">
+                    <p>Assignment 1 is a basic refresher on creating webpages using HTML. Some elements introduced here are basic images, text effects, tables, and links.</p>
+                </section>
+                <section class="col1of3 column">
+                    <h3><a href="hw02/hw02.html">Assignment 2 - Basic CSS</a></h3>
+                    <img src="images/HW2.png">
+                    <p>Assignment 2 builds off of the previous one, introducing CSS to our webpages. CSS allows us to easily decorate and modify our pages to our liking.</p>
+                </section>
+                <section class="col1of3 column">
+                    <h3><a href="hw03/hw03.html">Assignment 3 - Page Layout</a></h3>
+                    <img src="images/HW3.png">
+                    <p>Assignment 3 introduces flex containers, allowing pages to shift their layouts depending on the user's screen resolution.</p>
+                </section>
+            </div>
+        </main>
     </body>
 </html>

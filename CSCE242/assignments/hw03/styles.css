@@ -1,0 +1,197 @@
+/* Structure */
+#main-header{
+    background-color:#f2f1d5; /*I used a color eye dropper to get all the exact colors by the way*/
+    padding-bottom: 1px;
+    margin-top: 5px;
+}
+
+#main-content{
+    background-color: #f2f1d5;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 1px;
+}
+
+#sub-content{
+    background-color: #f2f1d5;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 1px;
+    align-items: center;
+}
+
+h1{
+    color:#5e878d
+}
+
+
+
+.column{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.bluecol1of6{
+    background-color: #5e878d;
+    margin: 0px;
+}
+
+.bluecol5of6{
+    background-color: #5e878d;
+    margin: 0px;
+}
+
+.redcol1of6{
+    background-color: #d88281;
+    margin: 0px;
+}
+
+.redcol5of6{
+    background-color: #d88281;
+    margin: 0px;
+}
+
+.bluetitle{
+    background-color: #a4bfb8;
+}
+
+.redtitle{
+    background-color: #d88281;
+    color: white;
+}
+
+.titletitle{
+    text-align: center;
+    color:white;
+}
+
+#main-content img{
+    width: 200px;
+    margin: auto;
+    display: inline-block;
+}
+
+li{
+    list-style-type: none;
+}
+
+footer{
+    background-color: #f2f1d5;
+    padding: 1px;
+    margin: 0px;
+}
+
+footer p{
+    color:#5e878d;
+    text-align: center;
+}
+
+
+
+
+/* Navigation */
+#main-nav ul{
+    padding-left: 0;
+}
+
+#main-nav li{
+    list-style-type: none;
+    padding: 5px;
+    background-color: #d88281;
+    border: 1px solid rgb(176, 181, 185);
+    text-align: center;
+}
+
+#main-nav a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Typography */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-header h1{
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 10px;
+}
+
+#main-content img{
+    margin: auto;
+    display: inline-block;
+}
+
+#main-content h2{
+    color:#5e878d;
+}
+
+#main-content h3, p{
+    color:white;
+}
+
+.bluetitle{
+    padding: 0px;
+}
+
+/* Larger Resolutions */
+@media (min-width: 900px) {
+    #main-nav ul, .flex-container{
+        display:flex;
+    }
+
+    #main-nav li{
+        flex: 1;
+        text-align: left;
+    }
+
+    #sub-content img{
+        justify-content: center;
+        margin: auto;
+        display: inline-block;
+    }
+
+    h3 .titletitle{
+        text-align: center;
+    }
+
+     .bluecol1of6{
+        flex: 1;
+        margin-bottom: 10px;
+    }
+
+    .bluecol5of6{
+        flex: 5;
+        margin-bottom: 10px;
+    }
+
+    .redcol1of6{
+        flex: 1;
+        margin-bottom: 10px;
+    }
+
+    .redcol5of6{
+        flex: 5;
+        margin-bottom: 10px;
+    }
+
+    .bluetitle{
+        flex: 1;
+        padding: 20px
+    }
+
+    .redtitle{
+        flex: 1;
+    }
+
+    .bluetitle img{
+        display: block;
+        margin: auto;
+    }
+    
+    .redtitle h3{
+        margin-left: 40px;
+    }
+}
