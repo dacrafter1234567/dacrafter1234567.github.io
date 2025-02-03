@@ -24,8 +24,6 @@ h1{
     color:#5e878d
 }
 
-
-
 .column{
     padding: 10px;
     margin: 5px;
@@ -139,7 +137,7 @@ body{
 /* Larger Resolutions */
 @media (min-width: 900px) {
     #main-nav ul, .flex-container{
-        display:flex;
+        display: flex;
     }
 
     #main-nav li{

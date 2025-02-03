@@ -1,0 +1,47 @@
+/*Structure*/
+body{
+    background-color: burlywood;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content{
+    background-color:bisque;
+    width: 70%;
+    margin:auto;
+    padding: 5px;
+    border: 1px solid darkgray;
+    box-shadow: 5px 5px gray;
+}
+
+header, footer{
+    background-color: rgb(206, 217, 217);
+    padding: 10px;
+    color:darkslategrey
+}
+
+/* Navigation */
+#main-nav ul{
+    padding-left: 0;
+}
+
+#main-nav li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+#main-nav a{
+    color: white;
+    text-decoration: none;
+}
+
+#main-nav a:hover{
+    color: cornflowerblue;
+}
+
+/* Typography */
+header h1 {
+    text-align: center;
+}
+footer p {
+    text-align: center;
+}

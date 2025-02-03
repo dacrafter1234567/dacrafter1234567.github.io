@@ -53,11 +53,22 @@ body{
 }
 
 img{
+    width: 80%;
     border: 3px solid rgb(54, 93, 158);
     border-radius: 5px;
 }
 
-
+.sub-content{
+    background-color:rgb(113, 152, 220);
+    padding: 10px;
+    margin: auto;
+    margin-top: 50px;
+    width: 90%;
+    border: 2px solid darkgray;
+    box-shadow: 5px 5px gray;
+    text-align: center;
+    color: rgb(215, 218, 250);
+}
 
 
 
