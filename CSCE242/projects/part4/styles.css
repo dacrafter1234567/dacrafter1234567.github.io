@@ -1,0 +1,567 @@
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    background-color: black;
+    margin-bottom: 0;
+    background-image: url(images/arconiamap.png);
+    background-size: cover;
+    background-position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+img[src=images/arconiamap]{
+    width: 10px;
+    margin-top: 500px;
+}
+
+#main-header{
+    background-color: #051f40;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.logocol{
+    flex: 1;
+}
+
+.logocol h2{
+    color: white;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.logocol h2:hover{
+    color: #021a36;
+}
+
+.col9of14{
+    flex: 10;
+}
+
+.searchcol{
+    flex: 2;
+    display: none;
+}
+
+.searchcol img{
+    margin-bottom: -7px;
+}
+
+
+.searchiconcol{
+    flex: 2;
+    margin: auto;
+    text-align: right;
+}
+
+.searchiconcol img{
+    width: 35px;
+    margin: 0;
+    margin-bottom: -7px;
+}
+
+.logincol{
+    flex: 1;
+}
+
+.logincol h2{
+    color: white;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.logincol h2:hover{
+    color: #021a36;
+}
+
+.logocol, .col9of14, .searchcol, .logincol{
+    padding: 5px;
+    margin: 5px;
+}
+
+.headerimage{
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    background-image: none;
+}
+
+main{
+    margin-top: 291px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    background-color: #202020;
+    display: absolute;
+    padding: 40px;
+    padding-top: 1px;
+}
+
+.bigleft{
+    flex: 5;
+    background-color: #202020;
+    margin-bottom: 0;
+}
+
+.smallright{
+    display: none;
+    flex: 1;
+    background-color: #202020;
+    margin-top: -40px;
+    margin-bottom: 0;
+    margin-left: 3%;
+}
+
+
+.wikiintro{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+}
+
+
+.wikinav{
+    justify-content: right;
+    text-align: right;
+    display: none;
+    flex: 1;
+}
+
+.largereswikinav{
+    display: flex;
+}
+
+.undernavtext{
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 0;
+    color: white;
+}
+
+table {/* All this table tuff is taken from https://www.htmltables.io/blog/how-to-make-an-html-table-with-rounded-corners*/
+    font-family: arial, sans-serif;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: white;
+  }
+  
+  td, th {
+    padding: 0.5rem;
+  }
+
+  td{
+    text-align: center;
+  }
+
+  th{
+    background-color: #d4a03a;
+  }
+  
+th, td {
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    padding: 0.5rem;
+  }
+
+table tr td:first-child, 
+table tr th:first-child {
+  border-left: 1px solid white;
+}
+
+table tr th {
+    border-top: 1px solid white;
+  }
+
+table tr:first-child th:first-child {
+    border-top-left-radius: 0.5rem;
+  }
+  
+table tr:first-child th:last-child {
+    border-top-right-radius: 0.5rem;
+  }
+  
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 0.5rem;
+  }
+  
+  
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 0.5rem;
+  }
+  
+  
+  
+
+.righttable{
+    display: flex;
+    margin: 30px;
+    flex:1;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.righttable img{
+    margin: 8px;
+}
+
+.righttable p{
+    margin-top: 5px;
+}
+
+.righttable h4{
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 0;
+
+}
+
+.user{
+    color: #3084d4;
+    margin-top: 10px;
+    margin-left: 25px;
+    text-align: left;
+}
+
+
+.pageportal img{
+    border: solid 1px white;
+  }
+
+.righttable1 img{
+    border: solid 1px white;
+  }
+
+.pageportalitems{
+    padding: 10px;
+    margin: 0;
+}
+
+.column{
+    flex-wrap: wrap;
+    display: flex;
+}
+
+
+.discordstaff{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.bottomstaff h4{
+    margin-left: 20px;
+    text-align: left;
+}
+
+
+.bottommobilestuff{
+    padding-bottom: 60px;
+    display: block;
+    background-color: #202020;
+}
+
+.bottomdiscord{
+    flex: 1;
+    margin: 4%;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.bottomdiscord img{
+    width: 95%;
+}
+
+.bottomstaff{
+    flex: 1;
+    margin: 4%;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 200px;
+}
+
+.portal{
+    justify-content: center;
+    display: block;
+    flex: 1;
+    margin: 10px;
+}
+
+.portal img{
+    width: 125px;
+    height: 125px;
+}
+
+.portal p{
+    margin-top: 5px;
+    color:#d4a03a;
+    font-size: small;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+footer{
+    display:inline-flex;
+    color:white;
+    width: 100%;
+    height: 100%;
+    background-color: #051f40;
+    margin-top: -9px;
+    padding: 0;
+}
+
+footer p{
+    padding-left: 50px;
+    vertical-align: auto;
+}
+
+
+/* Gallery Specific */
+.roundabout img{
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.gallerypics{
+    width: 300px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 25px;
+    background-color: antiquewhite;
+    color: #202020;
+    display: block;
+}
+
+.gallerypics img{
+    width: 100%;
+}
+
+.gallerypics p{
+    color: #202020;
+}
+
+/* Items Specific */
+.itembar{
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 3%;
+    background-color: antiquewhite;
+    color: #202020;
+}
+
+.itemimg{
+    flex: 1;
+    margin: 0;
+    display: inline;
+}
+
+.itemimg img{
+    width: 80%;
+    min-width: 200px;
+    display: inline;
+}
+
+.leftimg{
+    text-align: left;
+}
+
+.rightimg{
+    text-align: right;
+}
+
+.itemdesc{
+    flex: 4;
+    text-align: left;
+    margin-left: 30px
+}
+
+
+/* Characters Specific */
+
+.characterbar{
+    width: 300px;
+    border-radius: 5px;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 20px;
+    color: #202020;
+}
+
+.character{
+    display: block;
+    margin: 10px;
+    flex: 1;
+    width: 400px;
+    border:3px solid #d4a03a;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    color: black;
+}
+
+
+/* Domains Specific*/
+
+.deitybar{
+    width: 100%;
+    border: 4px solid #d4a03a;
+    border-radius: 5px;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: antiquewhite;
+    color: #202020;
+    justify-content: center;
+}
+
+.deityimg{
+    flex: 1;
+    margin: 13%;
+    margin-top: 5%;
+    margin-bottom: 0;
+    text-align: center;
+    margin: auto;
+
+   
+}
+
+.deityimg img{
+    height: 100%;
+    max-width: 300px;
+}
+
+.deitydesc{
+    flex: 4;
+    text-align: left;
+    margin-left: 30px;
+    width: 300px;
+    min-width: 300px;
+}
+
+
+
+/* Navigation */
+
+
+
+
+
+
+@media (min-width: 700px) {
+
+    .flex-container {
+        display: flex;
+    }
+
+    .searchcol{
+        display: flex;
+    }
+
+    .searchiconcol{
+        display: none;
+    }
+
+    main{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .pageportalitems section{
+        max-width: 50%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .roundabout img{
+        width: 90%;
+    }
+
+    .bottommobilestuff{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+   
+}
+
+
+@media (min-width: 875px) {
+
+    .wikiintro{
+        text-align: left;
+        justify-content: left;
+    }
+
+    .wikinav{
+        display: flex;
+    }
+
+    .largereswikinav{
+        display: none;
+    }
+
+
+    .pageportalitems section{
+        max-width: 60%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .roundabout img{
+        width: 80%;
+    }
+
+    
+}
+
+@media (min-width: 1250px) {
+    
+    .smallright{
+        display: block;
+    }
+
+    .pageportalitems{
+        display: block;
+    }
+
+    .pageportalitems section{
+        max-width: 80%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .bottommobilestuff{
+        display: none;
+    }
+
+    .roundabout img{
+        width: 70%;
+    }
+}
