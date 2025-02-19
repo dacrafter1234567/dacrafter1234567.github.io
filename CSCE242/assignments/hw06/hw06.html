@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Tab Name</title>
+    </head>
+    <body>
+        <div id="content">
+            <main>
+                <h1>Assignment 8</h1>
+                <h2>If Statements</h2>
+
+                <div class="dropdown">
+                    <button class="dropbtn"></button>
+                    <div class="dropdown-content hidden">
+                        <!-- Removed duplicate links -->
+                        <a href="#" id="example1Link">Example 1</a>
+                        <a href="#" id="example2Link">Example 2</a>
+                        <br>
+                    </div>
+                </div>
+                
+                <!-- Example Links (inside .examples) -->
+                <div class="examples">
+                    <div class="examples-content hidden">
+                        <a href="#" id="example1Link2">Example 1</a> | <a href="#" id="example2Link2">Example 2</a>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                
+                
+                <!-- Example 1 Content -->
+                <div id="example1Content" class="hidden">
+                    <label for="transportInput">Enter your form of transportation:</label>
+                    <input type="text" id="transportInput">
+                    <br>
+                    <br>
+                    <img id="transportImage" class="hidden" alt="Transportation Image">
+                </div>
+                
+                <!-- Example 2 Content -->
+                <div id="example2Content" class="hidden">
+                    <button class="colorButton" data-color="red">Red</button>
+                    <button class="colorButton" data-color="green">Green</button>
+                    <button class="colorButton" data-color="blue">Blue</button>
+                    <br>
+                    <span id="heart" class="red">♥</span>
+                </div>
+            </main>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,165 @@
+/* Structure */
+:root {
+    --main-background-color:#CDECEF;
+    --primary-color:#2B91AD;
+    --gallery-color:#FFB58A;
+    --circle-color: black;
+    --donation-percent: 0%;
+}
+
+/* Basic Styling */
+body {
+    background: #CDECEF;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#content {
+    background: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px lightblue;
+}
+
+main {
+    padding: 50px;
+}
+
+/* Dropdown Styles */
+.hidden {
+    display: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.examples {
+    display: none;
+}
+
+/* Dropdown button */
+.dropbtn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.dropbtn::before {
+    content: '▼'; /* Downward triangle */
+    font-size: 24px; /* Size of the triangle */
+}
+
+/* Active dropdown: Rotate triangle */
+.dropdown.active .dropbtn::before {
+    content: '▲'; /* Upward triangle */
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Initially, hide the example links (or style them differently) */
+.examples {
+    display: none;
+}
+
+/* When .examples is active, show the links */
+.examples.active {
+    display: block;
+}
+
+/* Style for links inside .examples when active */
+.examples.active a {
+    color: #2B91AD;
+    text-decoration: none;
+}
+
+/* Style the links differently when not active, if you want */
+.examples a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Example content */
+#heart {
+    font-size: 100px;
+}
+
+/* Heart Styles Using the Character */
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+img {
+    width: 300px;
+}
+
+
+
+/* For smaller screens */
+@media only screen and (max-width: 1299px) {
+    .examples {
+        display: none; /* Hide links */
+    }
+
+    .dropdown {
+        display: block; /* Show the dropdown */
+    }
+}
+
+/* For larger screens */
+@media only screen and (min-width: 1300px) {
+    .dropdown {
+        display: none; /* Hide dropdown */
+    }
+
+    .examples {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .examples-content {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .colorButton {
+        font-size: 18px;
+    }
+}
+
+
