@@ -1,0 +1,123 @@
+/* Structure */
+:root {
+    --main-background-color:#CDECEF;
+    --primary-color:#2B91AD;
+    --gallery-color:#FFB58A;
+    --circle-color: black;
+    --donation-percent: 0%;
+}
+
+/* Basic Styling */
+body {
+    background: #CDECEF;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#content {
+    background: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px lightblue;
+}
+
+main {
+    padding: 50px;
+}
+
+/* Dropdown Styles */
+.hidden {
+    display: none;
+}
+
+
+#ladder-container {
+    position: relative;
+    width: 100px;
+    height: 320px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Ladder Rungs */
+.rung {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+}
+
+/* Ladder Sides (hidden by default) */
+.ladder-side {
+    position: absolute;
+    width: 6px;
+    height: 95%;
+    background-color: black;
+    top: 2.5%;
+    display: none; /* Hide by default */
+}
+
+#left-side { left: 0; }
+#right-side { right: 0; }
+
+/* Stick Person */
+#stick-person {
+    position: absolute;
+    width: 40px;
+    bottom: 0;  /* Stick figure starts at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;  /* Hidden until ladder is created */
+    z-index: 2;
+}
+
+/* Button Styling */
+button {
+    margin: 10px auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+}
+
+.ladder-image{
+    position:absolute;
+    height: 100px;
+    width: 300px;
+    z-index: -2;
+}
+
+/* Make sure Climb Ladder button appears centered below the ladder */
+#climb-ladder {
+    display: none;
+    margin-top: 20px;
+}
+
+.ladder-image.top {
+    position: absolute;
+    height: 100px;
+    width: auto;
+    z-index: -2; /* Ensure it's behind everything else */
+    bottom: 700px;  /* Move the top image further down */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Bottom portal image */
+.ladder-image.bottom {
+    position: absolute;
+    height: 100px;
+    width: auto;
+    z-index: -2;
+    bottom: -70px; /* Adjust this value to move it lower */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
