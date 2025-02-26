@@ -334,6 +334,16 @@ footer p{
     vertical-align: auto;
 }
 
+.hidden {
+    display: none;
+}
+
+.signinbtn {
+    background-color: transparent;
+    border: none;
+    margin-top: 3px;
+}
+
 
 /* Gallery Specific */
 .roundabout img{
