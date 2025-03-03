@@ -12,32 +12,43 @@
                     <section class="logocol">
                         <table>
                             <th>
-                                <a href="index.html"><h2>Home</h2></a> 
+                                <a href="#"><h2>Home</h2></a> 
                             </th>
                         </table>             
                     </section>
-                    <section class="col9of14">
-                    </section>
+                    <section class="col9of14"></section>
+                    
+                    <!-- Search Icon -->
                     <section class="searchiconcol">
                         <table>
                             <th>
-                                <a href="#"><img src="images/searchicon.png"></a> 
+                                <a href="#" id="searchIcon"><img src="images/searchicon.png"></a> 
                             </th>
                         </table>
+                        <div id="searchDropdown" class="dropdown">
+                            <input type="text" id="searchInput" placeholder="Search...">
+                        </div>
                     </section>
+            
                     <section class="searchcol">
                         <table>
                             <th>
-                                <a href="#"><img src="images/320x35.jpg"></a> 
+                                <input type="text" id="searchInput" placeholder="Search...">
                             </th>
                         </table>
                     </section>
+
+                    <!-- Sign In Button -->
                     <section class="logincol">
                         <table>
                             <th>
-                                <a href="#"><h2>Sign In</h2></a> 
+                                <button class="signinbtn" id="signinbtn"><h2>Sign In</h2></button>
                             </th>
                         </table>
+                        <div id="signinDropdown" class="dropdown">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                        </div>
                     </section>
                 </div>
             </header>
@@ -46,7 +57,7 @@
             <main class="main-content">
                 
                 <div class="undernavtext">
-                    <a href="index.html"><img src="images/256x90.png"></a>
+                    <a href="index.html"><img src="images/ArconiaLogo.jpg" class="logoimg"></a>
                     <h2>Welcome to Arconia: Items Archive.</h2>
                     <p>This page is dedicated to the many artifacts, weapons, armors, and all manner of wounderous items<br>
                         These items may very anywehere from mundane items, to godly vestiges created eons ago.
@@ -65,51 +76,76 @@
                                 <tr><th>Items Archive</th></tr>
                                 <tr>
                                     <td>
+
                                     <div class="pageportalitems">
                                         <div class="itembar">
-                                            <div class="flex-container">
-                                                <section class="itemimg leftimg">
-                                                    <img src="images/GauntletsofWrath.jpg">
-                                                </section>
-                                                <section class="itemdesc">
-                                                    <h4>The Gauntlets of Wrath</h4>
-                                                    <h5>Armor (Gauntlets), Very Rare (Requires Attunement by a Destruction user)</h5>
-                                                    <p><b>Worldeater's Tithe:</b> As a bonus action, you smash the gauntlets together, gaining the benefits of the Enlarge spell for one minute or until you choose to end it. You can use this property once per short rest.
-                                                    <br><br><b>Slayer's Ferocity:</b> While wearing these gauntlets, your unarmed attacks and attacks made with melee weapons deal an additional 4d6 necrotic damage. </p>
-                                                </section>
+                                            <div class="itemcol">
+                                                <img src="images/GauntletsofWrath.jpg">
+                                                <h4>The Gauntlets of Wrath</h4>
+                                                <h5>Armor (Gauntlets), Very Rare (Requires Attunement by a Destruction user)</h5>
+                                                <p><b>Worldeater's Tithe:</b> As a bonus action, you smash the gauntlets together, gaining the benefits of the Enlarge spell for one minute or until you choose to end it. You can use this property once per short rest.
+                                                <br><br><b>Slayer's Ferocity:</b> While wearing these gauntlets, your unarmed attacks and attacks made with melee weapons deal an additional 4d6 necrotic damage. </p>
+                                            </div>
+                                            <div class="largecol">
+                                                <div class="flex-container">
+                                                    <section class="itemimg leftimg">
+                                                        <img src="images/GauntletsofWrath.jpg">
+                                                    </section>
+                                                    <section class="itemdesc">
+                                                        <h4>The Gauntlets of Wrath</h4>
+                                                        <h5>Armor (Gauntlets), Very Rare (Requires Attunement by a Destruction user)</h5>
+                                                        <p><b>Worldeater's Tithe:</b> As a bonus action, you smash the gauntlets together, gaining the benefits of the Enlarge spell for one minute or until you choose to end it. You can use this property once per short rest.
+                                                        <br><br><b>Slayer's Ferocity:</b> While wearing these gauntlets, your unarmed attacks and attacks made with melee weapons deal an additional 4d6 necrotic damage. </p>
+                                                    </section>
+                                                </div>
                                             </div>
                                         </div>
+                                       
                                         <div class="itembar">
-                                            <div class="flex-container">
-                                                <section class="blank">
-
-                                                </section>
-                                                <section class="itemdesc">
-                                                    <h4>Boots of the Steadfast Champion</h4>
-                                                    <h5>Woundrous Item, Rare (Requires Attunement)</h5>
-                                                    <p><b>Stable Footing:</b> You are immune to being grappled. Additionally, if you were to be moved in any way against your will, you move only half the distance. 
-                                                    </p>
-                                                </section>
-                                                <section class="itemimg rightimg">
-                                                    <img src="images/BootsoftheSteadfastChampion.jpg">
-                                                </section>
+                                            <div class="itemcol">
+                                                <img src="images/BootsoftheSteadfastChampion.jpg">
+                                                <h4>Boots of the Steadfast Champion</h4>
+                                                <h5>Woundrous Item, Rare (Requires Attunement)</h5>
+                                                <p><b>Stable Footing:</b> You are immune to being grappled. Additionally, if you were to be moved in any way against your will, you move only half the distance. 
+                                                </p>
+                                            </div>
+                                            <div class="largecol">
+                                                <div class="flex-container">
+                                                    <section class="itemdesc">
+                                                        <h4>Boots of the Steadfast Champion</h4>
+                                                        <h5>Woundrous Item, Rare (Requires Attunement)</h5>
+                                                        <p><b>Stable Footing:</b> You are immune to being grappled. Additionally, if you were to be moved in any way against your will, you move only half the distance. 
+                                                        </p>
+                                                    </section>
+                                                    <section class="itemimg rightimg">
+                                                        <img src="images/BootsoftheSteadfastChampion.jpg">
+                                                    </section>
+                                                </div>
                                             </div>
                                         </div> 
-                                        <div class="itembar">
-                                            <div class="flex-container">
-                                                <section class="itemimg leftimg">
-                                                    <img src="images/BaelzirsFury.jpg">
-                                                </section>
-                                                <section class="itemdesc">
-                                                    <h4>Baelzir's Fury</h4>
-                                                    <h5>Weapon (Greatsword), Legendary (Requires Attunement)</h5>
-                                                    <p>You gain a +3 bonus to attack and damage rolls made with this magic weapon. In addition, the weapon ignores resistance to slashing damage.
-                                                    <br><br><b>Crushing Strikes:</b> Instead of the standard 2d6 for a greatsword, this weapon deals 2d12 instead. While raging, this increases to 3d12. 
-                                                    </p>
-                                                </section>
-                                                <section class="blank">
 
-                                                </section>
+                                        <div class="itembar">
+                                            <div class="itemcol">
+                                                <img src="images/BaelzirsFury.jpg">
+                                                <h4>Baelzir's Fury</h4>
+                                                        <h5>Weapon (Greatsword), Legendary (Requires Attunement)</h5>
+                                                        <p>You gain a +3 bonus to attack and damage rolls made with this magic weapon. In addition, the weapon ignores resistance to slashing damage.
+                                                        <br><br><b>Crushing Strikes:</b> Instead of the standard 2d6 for a greatsword, this weapon deals 2d12 instead. While raging, this increases to 3d12. 
+                                                        </p>
+                                            </div>
+                                            <div class="largecol">
+                                                <div class="flex-container">
+                                                    <section class="itemimg leftimg">
+                                                        <img src="images/BaelzirsFury.jpg">
+                                                    </section>
+                                                    <section class="itemdesc">
+                                                        <h4>Baelzir's Fury</h4>
+                                                        <h5>Weapon (Greatsword), Legendary (Requires Attunement)</h5>
+                                                        <p>You gain a +3 bonus to attack and damage rolls made with this magic weapon. In addition, the weapon ignores resistance to slashing damage.
+                                                        <br><br><b>Crushing Strikes:</b> Instead of the standard 2d6 for a greatsword, this weapon deals 2d12 instead. While raging, this increases to 3d12. 
+                                                        </p>
+                                                    </section>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -201,5 +237,6 @@
                 <p>&copy; Collin Floyd / Dacrafter1</p>
             </footer>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

@@ -1,0 +1,131 @@
+/* Structure */
+:root {
+    --main-background-color:#CDECEF;
+    --primary-color:#2B91AD;
+    --gallery-color:#FFB58A;
+    --circle-color: black;
+    --donation-percent: 0%;
+}
+
+/* Basic Styling */
+body {
+    background: #CDECEF;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#content {
+    background: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px lightblue;
+}
+
+main {
+    padding: 50px;
+}
+
+/* Dropdown Styles */
+.hidden {
+    display: none;
+}
+
+#characters-table{
+    border-collapse: collapse;
+}
+
+#characters-table th,
+#characters-table td{
+    border: 1px black;
+    padding: 5px;
+}
+
+#characters-table th{
+    background-color: #FFB58A;
+    color: white;
+}
+
+#characters-table tr:hover {
+    background-color: #d4a03a;
+}
+
+#character-details{
+    margin: 5px;
+    border: 1px solid black;
+    background: #d4a03a;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#character-details h3{
+    color: white;
+    text-align: center;
+}
+
+#character-details img{
+    max-width: 30%;
+
+}
+
+#characters{
+    display: flex;
+}
+
+#characters table,
+#characters section{
+    flex: 1;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 60%;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.modal-body {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-text {
+    text-align: left;
+    flex: 1;
+}
+
+.modal-image img {
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 32px;
+    cursor: pointer;
+    color: red;
+}
+

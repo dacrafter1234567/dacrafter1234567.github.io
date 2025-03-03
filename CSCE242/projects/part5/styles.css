@@ -6,7 +6,7 @@ body{
     margin-top: 0;
     background-color: black;
     margin-bottom: 0;
-    background-image: url(images/arconiamap.png);
+    background-image: url(images/arconiamapgradient.png);
     background-size: cover;
     background-position: relative;
     background-size: 100%;
@@ -101,7 +101,7 @@ img[src=images/arconiamap]{
 }
 
 main{
-    margin-top: 291px;
+    margin-top: 290px;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
@@ -305,7 +305,7 @@ table tr:last-child td:last-child {
 
 .portal img{
     width: 125px;
-    height: 125px;
+    height: 120px;
 }
 
 .portal p{
@@ -339,11 +339,64 @@ footer p{
 }
 
 .signinbtn {
-    background-color: transparent;
+    background:none;
     border: none;
     margin-top: 3px;
+    cursor: pointer;
 }
 
+input {
+    height: 20px;
+    width: 95%;
+    padding: 5px;
+    background-color: #98958b8b;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input::placeholder{
+    color: white;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color:#d4a03a;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: .5rem;
+    width: 200px;
+}
+
+/* Positioning for dropdowns */
+#searchDropdown {
+    top: 65px;
+    right: -75px;
+    transform: translateX(-50%);
+}
+
+#signinDropdown {
+    top: 65px;
+    right: 5px;
+}
+
+/* Ensure the input fields don't shift content */
+input:focus {
+    outline: none;
+}
+
+/* Add cursor when hovering over inputs */
+input:hover {
+    cursor: text;
+}
+
+.logoimg{
+    margin-top: -75px;
+    width: 400px;
+}
 
 /* Gallery Specific */
 .roundabout img{
@@ -356,12 +409,12 @@ footer p{
 }
 
 .gallerypics{
-    width: 300px;
+    width: 400px;
     border: 2px solid white;
     border-radius: 5px;
     margin: auto;
-    margin-top: 0;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 0;
     background-color: antiquewhite;
     color: #202020;
     display: block;
@@ -373,6 +426,8 @@ footer p{
 
 .gallerypics p{
     color: #202020;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* Items Specific */
@@ -394,8 +449,7 @@ footer p{
 }
 
 .itemimg img{
-    width: 80%;
-    min-width: 200px;
+    width: 200px;
     display: inline;
 }
 
@@ -413,6 +467,61 @@ footer p{
     margin-left: 30px
 }
 
+.itemcol{
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.itemcol img{
+    width: 200px;
+    margin-top: 5px;
+}
+
+/* Slideshow Stuff */
+#slideshow{
+    position: relative;
+    height: 300px;
+    width: 80%;
+    padding: 10px;
+    background-color: #161616;
+    margin: auto;
+}
+
+#slideshow img {
+    height: 100%;
+}
+
+#galleryslideshow{
+    position: relative;
+    height: 150px;
+    width: 80%;
+    padding: 10px;
+    background-color: #161616;
+    margin: auto;
+}
+
+#galleryslideshow img {
+    height: 100%;
+}
+
+.arrowbutton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  #prev { left: 5px; }
+  #next { right: 5px; }
+
+
+
 
 /* Characters Specific */
 
@@ -429,11 +538,42 @@ footer p{
     display: block;
     margin: 10px;
     flex: 1;
-    width: 400px;
     border:3px solid #d4a03a;
     border-radius: 5px;
     background-color: antiquewhite;
     color: black;
+    min-width: 400px;
+}
+
+.chardesc{
+    flex: 4;
+    text-align: left;
+    margin-left: 30px;
+    text-wrap: wrap;
+}
+
+.charcol{
+    display: block;
+}
+
+.charcol img{
+    margin-top: 20px;
+    height: 100%;
+    width: auto;
+}
+
+.charcol p{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.largecol{
+    display: none;
+}
+
+.character img{
+    height: 300px;
+    width:fit-content;
 }
 
 
@@ -471,6 +611,7 @@ footer p{
     flex: 4;
     text-align: left;
     margin-left: 30px;
+    margin-right: 30px;
     width: 300px;
     min-width: 300px;
 }
@@ -518,6 +659,22 @@ footer p{
         margin-right: 3%;
     }
 
+    .charcol{
+        display: none;
+    }
+
+    .itemcol{
+        display: none;
+    }
+
+    .largecol{
+        display: flex;
+    }
+
+    #galleryslideshow{
+        height: 200px;
+    }
+
    
 }
 
@@ -547,6 +704,12 @@ footer p{
     .roundabout img{
         width: 80%;
     }
+
+    #galleryslideshow{
+        height: 300px;
+    }
+
+    
 
     
 }
