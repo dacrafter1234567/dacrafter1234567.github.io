@@ -1,47 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-    loadDeities();
-    setupSlideshow();
-    setupDropdowns();
-    setupGallery();
-});
-
-// Fetch and Display Deities from JSON
-function loadDeities() {
-    fetch("https://raw.githubusercontent.com/dacrafter1234567/dacrafter1234567.github.io/main/CSCE242/projects/part6/json/deities.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-        })
+    fetch("deities.json") // Adjust the path based on your project structure
+        .then(response => response.json())
         .then(data => {
             console.log("Deities Loaded:", data);
-            displayDeities(data.deities); // Ensure correct property access
+            displayDeity(data.deities[0]); // Loads the first deity for now
         })
         .catch(error => console.error("Error loading JSON:", error));
-}
+});
 
-function displayDeities(deities) {
-    const container = document.getElementById("deity-container");
+function displayDeity(deity) {
+    const container = document.querySelector(".deitydesc");
+
     if (!container) {
         console.error("Container element not found!");
         return;
     }
 
-    container.innerHTML = ""; // Clear existing content
-
-    deities.forEach(deity => {
-        const deityElement = document.createElement("div");
-        deityElement.className = "deity";
-        deityElement.innerHTML = `
-            <h3>${deity.name}</h3>
-            <p><strong>Domain:</strong> ${deity.domains.join(", ")}</p>
-            <p><strong>Affinity:</strong> ${deity.elemental_affinity}</p>
-            <img src="${deity.image}" alt="${deity.name}" onerror="this.src='images/placeholder.jpg';">
-        `;
-        container.appendChild(deityElement);
-    });
+    container.innerHTML = `
+        <h2>${deity.name}</h2>
+        <h3>Elemental Affinity: ${deity.elementalAffinity}</h3>
+        <p>${deity.description}</p>
+        <p>Presenting Gender: ${deity.presentingGender}</p>
+        <p>Side of Archon War: ${deity.sideOfArchonWar}</p>
+        <p>Alignment: ${deity.alignment}</p>
+        <p>Personality: ${deity.personality.join(", ")}</p>
+        <p>Devoted Guilds: ${deity.devotedGuilds}</p>
+    `;
 }
+
 
 // Slideshow Functionality
 function setupSlideshow() {

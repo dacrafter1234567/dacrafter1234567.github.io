@@ -1,12 +1,15 @@
 {
-    "name": "Auronix, The Keeper of Laylines",
-    "elemental_affinity": "Arcana",
-    "description": "Auronix is the eternal guardian of the Laylines, the roots of magical energy that span the world of Arconia. Known as the creator of arcane magic, Auronix is believed to be one of the oldest and most powerful of the deities. With a gaze as sharp as a spellcaster's incantation, Auronix watches over the balance of magic, ensuring that it flows freely and harmoniously throughout the realms.",
-    "domains": ["Arcane Magic", "Intelligent Creatures", "Natural Elements", "Enchanting"],
-    "gender": "Male",
-    "side": "Radiance",
-    "alignment": "Lawful Neutral",
-    "personality": ["Intelligent", "Just", "Protective", "Guiding", "Stern at times"],
-    "devoted_guilds": ["The Arcanist's Lure", "The Arcane Order", "The Enchanters Exalted"]
-}
-      
+    "deities": [
+      {
+        "name": "Mertis, Creator of Planes",
+        "elementalAffinity": "Creation",
+        "description": "Mertis is the divine architect who forged the very fabric of existence, shaping planes and dimensions with boundless creativity. With each stroke of divine inspiration, Mertis breathes life into new worlds, crafting intricate tapestries of reality that teem with the wonders of creation. Mertis holds domains over: Creation of New Life, Invention, Assembly and Manufacturing, and Architecture.",
+        "presentingGender": "Male",
+        "sideOfArchonWar": "Radiance",
+        "alignment": "Chaotic Good",
+        "personality": ["Creative", "Benevolent", "Innovative", "Intelligent", "Inspirational"],
+        "devotedGuilds": "The Pillars of Nascency"
+      }
+    ]
+  }
+  
