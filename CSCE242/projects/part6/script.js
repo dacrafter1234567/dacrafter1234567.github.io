@@ -1,36 +1,48 @@
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("deities.json") // Adjust the path based on your project structure
-        .then(response => response.json())
+document.addEventListener("DOMContentLoaded", function() {
+    // Fetch JSON from the GitHub raw URL
+    fetch("https://raw.githubusercontent.com/dacrafter1234567/dacrafter1234567.github.io/main/CSCE242/projects/part6/json/deities.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
             console.log("Deities Loaded:", data);
-            displayDeity(data.deities[0]); // Loads the first deity for now
+            displayDeities(data); // Call a function to process the data
         })
-        .catch(error => console.error("Error loading JSON:", error));
+        .catch(error => {
+            console.error("Error loading JSON:", error);
+        });
 });
 
-function displayDeity(deity) {
-    const container = document.querySelector(".deitydesc");
-
+function displayDeities(deities) {
+    const container = document.getElementById("deity-container");
     if (!container) {
         console.error("Container element not found!");
         return;
     }
 
-    console.log("Deity data:", deity);
+    container.innerHTML = ""; // Clear existing content
 
-    container.innerHTML = `
-        <h2>${deity.name}</h2>
-        <h3>Elemental Affinity: ${deity.elementalAffinity}</h3>
-        <p>${deity.description}</p>
-        <p>Presenting Gender: ${deity.presentingGender}</p>
-        <p>Side of Archon War: ${deity.sideOfArchonWar}</p>
-        <p>Alignment: ${deity.alignment}</p>
-        <p>Personality: ${deity.personality.join(", ")}</p>
-        <p>Devoted Guilds: ${deity.devotedGuilds}</p>
-    `;
-
-    console.log("Content inserted into deitydesc.");
+    deities.forEach(deity => {
+        const deityElement = document.createElement("div");
+        deityElement.className = "deity";
+        deityElement.innerHTML = `
+            <h3>${deity.name}</h3>
+            <p>Elemental Affinity: ${deity.elemental_affinity}</p>
+            <p>${deity.description}</p>
+            <p>Gender: ${deity.gender}</p>
+            <p>Side of Archon War: ${deity.side}</p>
+            <p>Alignment: ${deity.alignment}</p>
+            <p>Personality: ${deity.personality.join(', ')}</p>
+            <p>Devoted Guilds: ${deity.devoted_guilds.join(', ')}</p>
+            <img src="${deity.image}" alt="${deity.name}">
+        `;
+        container.appendChild(deityElement);
+    });
 }
+
 
 
 
