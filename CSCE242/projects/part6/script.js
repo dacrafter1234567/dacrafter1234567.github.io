@@ -1,62 +1,12 @@
-let slides = document.querySelectorAll("#slideshow .slide, #galleryslideshow .slide");
-let current = 0; // Track the current slide
-
-// Auto slideshow
-setInterval(nextSlide, 5000);
-
-function nextSlide() {
-    slides[current].classList.add("hidden"); // Hide current slide
-    current = (current + 1) % slides.length; // Move to next
-    slides[current].classList.remove("hidden"); // Show new slide
-}
-
-function prevSlide() {
-    slides[current].classList.add("hidden"); // Hide current slide
-    current = (current - 1 + slides.length) % slides.length; // Move to previous
-    slides[current].classList.remove("hidden"); // Show new slide
-}
-
-
-document.querySelectorAll(".gallery section").forEach(()=>{
-    tile.onClick = () => {
-        const label = tile.querySelector("h4").innerHTML;
-        const imgSRC = tile.querySelector("img").src;
-        console.log(label);
-    }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
-    const searchIcon = document.getElementById("searchIcon");
-    const searchDropdown = document.getElementById("searchDropdown");
-    const signinbtn = document.getElementById("signinbtn");
-    const signinDropdown = document.getElementById("signinDropdown");
-
-    // Show/hide search dropdown
-    searchIcon.addEventListener("click", function (event) {
-        event.preventDefault();
-        searchDropdown.style.display = (searchDropdown.style.display === "block") ? "none" : "block";
-    });
-
-    // Show/hide sign-in dropdown
-    signinbtn.addEventListener("click", function () {
-        signinDropdown.style.display = (signinDropdown.style.display === "block") ? "none" : "block";
-    });
-
-    // Hide dropdowns when clicking outside
-    document.addEventListener("click", function (event) {
-        if (!searchIcon.contains(event.target) && !searchDropdown.contains(event.target)) {
-            searchDropdown.style.display = "none";
-        }
-        if (!signinbtn.contains(event.target) && !signinDropdown.contains(event.target)) {
-            signinDropdown.style.display = "none";
-        }
-    });
+    loadDeities();
+    setupSlideshow();
+    setupDropdowns();
+    setupGallery();
 });
 
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
+// Fetch and Display Deities from JSON
+function loadDeities() {
     fetch("https://raw.githubusercontent.com/dacrafter1234567/dacrafter1234567.github.io/main/CSCE242/projects/part6/json/deities.json")
         .then(response => {
             if (!response.ok) {
@@ -66,12 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             console.log("Deities Loaded:", data);
-            displayDeities(data); // Call a function to process the data
+            displayDeities(data.deities); // Ensure correct property access
         })
-        .catch(error => {
-            console.error("Error loading JSON:", error);
-        });
-});
+        .catch(error => console.error("Error loading JSON:", error));
+}
 
 function displayDeities(deities) {
     const container = document.getElementById("deity-container");
@@ -85,11 +33,81 @@ function displayDeities(deities) {
     deities.forEach(deity => {
         const deityElement = document.createElement("div");
         deityElement.className = "deity";
-        deityElement.innerHTML = `<h3>${deity.name}</h3><p>Domain: ${deity.domain}</p>`;
+        deityElement.innerHTML = `
+            <h3>${deity.name}</h3>
+            <p><strong>Domain:</strong> ${deity.domains.join(", ")}</p>
+            <p><strong>Affinity:</strong> ${deity.elemental_affinity}</p>
+            <img src="${deity.image}" alt="${deity.name}" onerror="this.src='images/placeholder.jpg';">
+        `;
         container.appendChild(deityElement);
     });
 }
 
+// Slideshow Functionality
+function setupSlideshow() {
+    let slides = document.querySelectorAll("#slideshow .slide, #galleryslideshow .slide");
+    let current = 0;
 
+    if (slides.length === 0) return; // Ensure slides exist before running
 
+    setInterval(() => nextSlide(slides, current), 5000);
 
+    function nextSlide(slides, currentIndex) {
+        slides[currentIndex].classList.add("hidden");
+        current = (currentIndex + 1) % slides.length;
+        slides[current].classList.remove("hidden");
+    }
+
+    function prevSlide() {
+        slides[current].classList.add("hidden");
+        current = (current - 1 + slides.length) % slides.length;
+        slides[current].classList.remove("hidden");
+    }
+}
+
+// Gallery Interaction
+function setupGallery() {
+    document.querySelectorAll(".gallery section").forEach(tile => {
+        tile.addEventListener("click", () => {
+            const label = tile.querySelector("h4")?.innerHTML || "Unknown";
+            const imgSRC = tile.querySelector("img")?.src || "";
+            console.log(`Selected: ${label} - ${imgSRC}`);
+        });
+    });
+}
+
+// Dropdown Menu Handling
+function setupDropdowns() {
+    const searchIcon = document.getElementById("searchIcon");
+    const searchDropdown = document.getElementById("searchDropdown");
+    const signinbtn = document.getElementById("signinbtn");
+    const signinDropdown = document.getElementById("signinDropdown");
+
+    if (searchIcon && searchDropdown) {
+        searchIcon.addEventListener("click", (event) => {
+            event.preventDefault();
+            toggleDropdown(searchDropdown);
+        });
+    }
+
+    if (signinbtn && signinDropdown) {
+        signinbtn.addEventListener("click", () => toggleDropdown(signinDropdown));
+    }
+
+    // Hide dropdowns when clicking outside
+    document.addEventListener("click", function (event) {
+        if (searchIcon && searchDropdown && !searchIcon.contains(event.target) && !searchDropdown.contains(event.target)) {
+            searchDropdown.style.display = "none";
+        }
+        if (signinbtn && signinDropdown && !signinbtn.contains(event.target) && !signinDropdown.contains(event.target)) {
+            signinDropdown.style.display = "none";
+        }
+    });
+}
+
+// Toggle Dropdown Visibility
+function toggleDropdown(element) {
+    if (element) {
+        element.style.display = element.style.display === "block" ? "none" : "block";
+    }
+}

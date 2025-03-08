@@ -1,41 +1,12 @@
 {
-    "deities": [
-      {
-        "name": "Auronix, The Keeper of Laylines",
-        "elemental_affinity": "Arcana",
-        "description": "Auronix is the eternal guardian of the Laylines, the roots of magical energy that span the world of Arconia. Known as the creator of arcane magic, Auronix is believed to be one of the oldest and most powerful of the deities. With a gaze as sharp as a spellcaster's incantation, Auronix watches over the balance of magic, ensuring that it flows freely and harmoniously throughout the realms.",
-        "domains": ["Arcane Magic", "Intelligent Creatures", "Natural Elements", "Enchanting"],
-        "gender": "Male",
-        "side": "Radiance",
-        "alignment": "Lawful Neutral",
-        "personality": ["Intelligent", "Just", "Protective", "Guiding", "Stern at times"],
-        "devoted_guilds": ["The Arcanist's Lure", "The Arcane Order", "The Enchanters Exalted"],
-        "image": "images/Arcana--AuronixTheKeeperOfLaylines.JPG"
-      },
-      {
-        "name": "Mertis, Creator of Planes",
-        "elemental_affinity": "Creation",
-        "description": "Mertis is the divine architect who forged the very fabric of existence, shaping planes and dimensions with boundless creativity. With each stroke of divine inspiration, Mertis breathes life into new worlds, crafting intricate tapestries of reality that teem with the wonders of creation.",
-        "domains": ["Creation of New Life", "Invention", "Assembly and Manufacturing", "Architecture"],
-        "gender": "Male",
-        "side": "Radiance",
-        "alignment": "Chaotic Good",
-        "personality": ["Creative", "Benevolent", "Innovative", "Intelligent", "Inspirational"],
-        "devoted_guilds": ["The Pillars of Nascency"],
-        "image": "images/Creation--MertisCreatorOfPlanes.jpg"
-      },
-      {
-        "name": "Dryntias, Queen of The Void",
-        "elemental_affinity": "Darkness",
-        "description": "Dryntias is the enigmatic ruler of the void, shrouded in darkness and mystery. With eyes that pierce the veil of shadows, she commands the forces of darkness, wielding their power with an air of regal authority that inspires awe and fear in equal measure.",
-        "domains": ["Night", "The Moon", "Arachnids", "Assassins", "Thieves"],
-        "gender": "Female",
-        "side": "Deceiver",
-        "alignment": "Neutral Evil",
-        "personality": ["Cunning", "Elusive", "Deceiving", "Observant", "Tactical"],
-        "devoted_guilds": ["Artemis' Recurve", "Cry of the Beast", "Deals with the Devil", "Joker's Apprentice", "Void Walkers", "Claw of Wrath"],
-        "image": "images/Darkness--DryntiasQueenOfTheVoid.jpg"
-      }
-    ]
-  }
-  
+    "name": "Auronix, The Keeper of Laylines",
+    "elemental_affinity": "Arcana",
+    "description": "Auronix is the eternal guardian of the Laylines, the roots of magical energy that span the world of Arconia. Known as the creator of arcane magic, Auronix is believed to be one of the oldest and most powerful of the deities. With a gaze as sharp as a spellcaster's incantation, Auronix watches over the balance of magic, ensuring that it flows freely and harmoniously throughout the realms.",
+    "domains": ["Arcane Magic", "Intelligent Creatures", "Natural Elements", "Enchanting"],
+    "gender": "Male",
+    "side": "Radiance",
+    "alignment": "Lawful Neutral",
+    "personality": ["Intelligent", "Just", "Protective", "Guiding", "Stern at times"],
+    "devoted_guilds": ["The Arcanist's Lure", "The Arcane Order", "The Enchanters Exalted"]
+}
+      
