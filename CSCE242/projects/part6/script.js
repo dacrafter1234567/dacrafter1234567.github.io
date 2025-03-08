@@ -16,6 +16,8 @@ function displayDeity(deity) {
         return;
     }
 
+    console.log("Deity data:", deity);
+
     container.innerHTML = `
         <h2>${deity.name}</h2>
         <h3>Elemental Affinity: ${deity.elementalAffinity}</h3>
@@ -26,7 +28,10 @@ function displayDeity(deity) {
         <p>Personality: ${deity.personality.join(", ")}</p>
         <p>Devoted Guilds: ${deity.devotedGuilds}</p>
     `;
+
+    console.log("Content inserted into deitydesc.");
 }
+
 
 
 // Slideshow Functionality
