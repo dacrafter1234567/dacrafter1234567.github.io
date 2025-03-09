@@ -16,8 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 });
 
-function displayDeities(deities) {
+function displayDeities(data) {
+    const deities = data.deities;  // Access the 'deities' array
     const container = document.getElementById("deity-container");
+
     if (!container) {
         console.error("Container element not found!");
         return;
@@ -28,6 +30,11 @@ function displayDeities(deities) {
     deities.forEach(deity => {
         const deityElement = document.createElement("div");
         deityElement.className = "deity";
+        
+        // Safely handle personality and devoted_guilds with fallback
+        const personality = Array.isArray(deity.personality) ? deity.personality.join(', ') : "N/A";
+        const devotedGuilds = Array.isArray(deity.devoted_guilds) ? deity.devoted_guilds.join(', ') : "N/A";
+        
         deityElement.innerHTML = `
             <h3>${deity.name}</h3>
             <p>Elemental Affinity: ${deity.elemental_affinity}</p>
@@ -35,13 +42,14 @@ function displayDeities(deities) {
             <p>Gender: ${deity.gender}</p>
             <p>Side of Archon War: ${deity.side}</p>
             <p>Alignment: ${deity.alignment}</p>
-            <p>Personality: ${deity.personality.join(', ')}</p>
-            <p>Devoted Guilds: ${deity.devoted_guilds.join(', ')}</p>
-            <img src="${deity.image}" alt="${deity.name}">
+            <p>Personality: ${personality}</p>
+            <p>Devoted Guilds: ${devotedGuilds}</p>
         `;
         container.appendChild(deityElement);
     });
 }
+
+
 
 
 
