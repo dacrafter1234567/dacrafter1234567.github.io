@@ -16,38 +16,38 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 });
 
-function displayDeities(data) {
-    const deities = data.deities;  // Access the 'deities' array
-    const container = document.getElementById("deity-container");
+function displayDeities(deities) {
+    deities.forEach((deity, index) => {
+        // Create or select the container dynamically
+        let container = document.getElementById(`deity-container-${index + 1}`);
 
-    if (!container) {
-        console.error("Container element not found!");
-        return;
-    }
+        // If there are more deities than existing containers, create new ones
+        if (!container) {
+            container = document.createElement("div");
+            container.className = "deitybar";
+            container.id = `deity-container-${index + 1}`;
+            document.body.appendChild(container); // Append to body or a specific section
+        }
 
-    container.innerHTML = ""; // Clear existing content
-
-    deities.forEach(deity => {
         const deityElement = document.createElement("div");
         deityElement.className = "deity";
-        
-        // Safely handle personality and devoted_guilds with fallback
-        const personality = Array.isArray(deity.personality) ? deity.personality.join(', ') : "N/A";
-        const devotedGuilds = Array.isArray(deity.devoted_guilds) ? deity.devoted_guilds.join(', ') : "N/A";
-        
+
         deityElement.innerHTML = `
-            <h3>${deity.name}</h3>
-            <p>Elemental Affinity: ${deity.elemental_affinity}</p>
+            <h2>${deity.name}</h2>
+            <h3>Elemental Affinity: ${deity.elemental_affinity}</h3>
             <p>${deity.description}</p>
+            <p>Domains: ${deity.domains.join(", ")}</p>
             <p>Gender: ${deity.gender}</p>
-            <p>Side of Archon War: ${deity.side}</p>
+            <p>Side: ${deity.side}</p>
             <p>Alignment: ${deity.alignment}</p>
-            <p>Personality: ${personality}</p>
-            <p>Devoted Guilds: ${devotedGuilds}</p>
+            <p>Personality: ${deity.personality.join(", ")}</p>
+            <p>Devoted Guilds: ${deity.devoted_guilds.join(", ")}</p>
         `;
+
         container.appendChild(deityElement);
     });
 }
+
 
 
 
