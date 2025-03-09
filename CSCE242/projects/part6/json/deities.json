@@ -16,6 +16,7 @@
       "name": "Mertis",
       "elemental_affinity": "Creation",
       "description": "Mertis is the divine architect who forged the very fabric of existence...",
+      "domains": ["la", "de", "da"],
       "gender": "Male",
       "side": "Radiance",
       "alignment": "Chaotic Good",

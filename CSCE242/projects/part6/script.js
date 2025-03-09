@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Fetch JSON from the GitHub raw URL
+document.addEventListener("DOMContentLoaded", function () {
+    // Fetch JSON from GitHub raw URL
     fetch("https://raw.githubusercontent.com/dacrafter1234567/dacrafter1234567.github.io/main/CSCE242/projects/part6/json/deities.json")
         .then(response => {
             if (!response.ok) {
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             console.log("Deities Loaded:", data);
-            displayDeities(data); // Call a function to process the data
+            displayDeities(data.deities); // ✅ Fix: Access the array inside the object
         })
         .catch(error => {
             console.error("Error loading JSON:", error);
@@ -18,10 +18,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function displayDeities(deities) {
     console.log("Processing Deities:", deities);
+
+    if (!Array.isArray(deities)) {
+        console.error("Error: deities is not an array!", deities);
+        return;
+    }
+
     deities.forEach((deity, index) => {
         let container = document.getElementById(`deity-container-${index + 1}`);
         console.log(`Looking for: deity-container-${index + 1}`, container);
-        
+
         if (!container) {
             console.error(`Container deity-container-${index + 1} not found!`);
             return;
@@ -45,6 +51,7 @@ function displayDeities(deities) {
         container.appendChild(deityElement);
     });
 }
+
 
 
 
