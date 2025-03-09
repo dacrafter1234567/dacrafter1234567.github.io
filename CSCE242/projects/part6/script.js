@@ -52,17 +52,36 @@ function displayDeities(deities) {
     });
 }
 
+// Dropdown Stuff
+document.addEventListener("DOMContentLoaded", function () {
+    const searchIcon = document.getElementById("searchIcon");
+    const searchDropdown = document.getElementById("searchDropdown");
+    const signinbtn = document.getElementById("signinbtn");
+    const signinDropdown = document.getElementById("signinDropdown");
 
+    // Show/hide search dropdown
+    searchIcon.addEventListener("click", function (event) {
+        event.preventDefault();
+        searchDropdown.style.display = (searchDropdown.style.display === "block") ? "none" : "block";
+    });
 
+    // Show/hide sign-in dropdown
+    signinbtn.addEventListener("click", function () {
+        signinDropdown.style.display = (signinDropdown.style.display === "block") ? "none" : "block";
+    });
 
+    // Hide dropdowns when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!searchIcon.contains(event.target) && !searchDropdown.contains(event.target)) {
+            searchDropdown.style.display = "none";
+        }
+        if (!signinbtn.contains(event.target) && !signinDropdown.contains(event.target)) {
+            signinDropdown.style.display = "none";
+        }
+    });
+});
 
-
-
-
-
-
-
-// Slideshow Functionality
+// Slideshow Stuff
 function setupSlideshow() {
     let slides = document.querySelectorAll("#slideshow .slide, #galleryslideshow .slide");
     let current = 0;

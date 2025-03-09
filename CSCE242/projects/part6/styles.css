@@ -50,6 +50,13 @@ img[src=images/arconiamap]{
     flex: 10;
 }
 
+.col9of14 hr{
+    margin-top: 23px;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+
 .searchcol{
     flex: 2;
     display: none;
@@ -98,6 +105,7 @@ img[src=images/arconiamap]{
     z-index: 0;
     position: absolute;
     background-image: none;
+    
 }
 
 main{
@@ -396,6 +404,8 @@ input:hover {
 .logoimg{
     margin-top: -75px;
     width: 400px;
+    border: 3px solid #d4a03a;
+    border-radius: 15px;
 }
 
 /* Gallery Specific */
@@ -605,6 +615,7 @@ input:hover {
 .deityimg img{
     height: 100%;
     max-width: 300px;
+    object-fit: contain;
 }
 
 .deitydesc{
