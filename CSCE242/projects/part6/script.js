@@ -17,16 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function displayDeities(deities) {
+    console.log("Processing Deities:", deities);
     deities.forEach((deity, index) => {
-        // Get the specific deity container by ID
         let container = document.getElementById(`deity-container-${index + 1}`);
-
+        console.log(`Looking for: deity-container-${index + 1}`, container);
+        
         if (!container) {
             console.error(`Container deity-container-${index + 1} not found!`);
             return;
         }
 
-        // Create the deity description content
         const deityElement = document.createElement("div");
         deityElement.className = "deity-info";
 
@@ -42,10 +42,10 @@ function displayDeities(deities) {
             <p><strong>Devoted Guilds:</strong> ${deity.devoted_guilds.join(", ")}</p>
         `;
 
-        // Append to the correct deity container
         container.appendChild(deityElement);
     });
 }
+
 
 
 
