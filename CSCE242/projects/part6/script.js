@@ -40,17 +40,18 @@ function displayDeities(deities) {
             <h2>${deity.name}</h2>
             <h3>Elemental Affinity: ${deity.elemental_affinity}</h3>
             <p>${deity.description}</p>
-            <p><strong>Domains:</strong> ${deity.domains.join(", ")}</p>
+            <p><strong>Domains:</strong> ${Array.isArray(deity.domains) ? deity.domains.join(", ") : "Unknown"}</p>
             <p><strong>Gender:</strong> ${deity.gender}</p>
             <p><strong>Side:</strong> ${deity.side}</p>
             <p><strong>Alignment:</strong> ${deity.alignment}</p>
-            <p><strong>Personality:</strong> ${deity.personality.join(", ")}</p>
-            <p><strong>Devoted Guilds:</strong> ${deity.devoted_guilds.join(", ")}</p>
+            <p><strong>Personality:</strong> ${Array.isArray(deity.personality) ? deity.personality.join(", ") : "Unknown"}</p>
+            <p><strong>Devoted Guilds:</strong> ${Array.isArray(deity.devoted_guilds) ? deity.devoted_guilds.join(", ") : "None"}</p>
         `;
 
         container.appendChild(deityElement);
     });
 }
+
 
 
 
