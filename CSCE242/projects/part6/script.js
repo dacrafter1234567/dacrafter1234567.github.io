@@ -18,35 +18,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function displayDeities(deities) {
     deities.forEach((deity, index) => {
-        // Create or select the container dynamically
+        // Get the specific deity container by ID
         let container = document.getElementById(`deity-container-${index + 1}`);
 
-        // If there are more deities than existing containers, create new ones
         if (!container) {
-            container = document.createElement("div");
-            container.className = "deitybar";
-            container.id = `deity-container-${index + 1}`;
-            document.body.appendChild(container); // Append to body or a specific section
+            console.error(`Container deity-container-${index + 1} not found!`);
+            return;
         }
 
+        // Create the deity description content
         const deityElement = document.createElement("div");
-        deityElement.className = "deity";
+        deityElement.className = "deity-info";
 
         deityElement.innerHTML = `
             <h2>${deity.name}</h2>
             <h3>Elemental Affinity: ${deity.elemental_affinity}</h3>
             <p>${deity.description}</p>
-            <p>Domains: ${deity.domains.join(", ")}</p>
-            <p>Gender: ${deity.gender}</p>
-            <p>Side: ${deity.side}</p>
-            <p>Alignment: ${deity.alignment}</p>
-            <p>Personality: ${deity.personality.join(", ")}</p>
-            <p>Devoted Guilds: ${deity.devoted_guilds.join(", ")}</p>
+            <p><strong>Domains:</strong> ${deity.domains.join(", ")}</p>
+            <p><strong>Gender:</strong> ${deity.gender}</p>
+            <p><strong>Side:</strong> ${deity.side}</p>
+            <p><strong>Alignment:</strong> ${deity.alignment}</p>
+            <p><strong>Personality:</strong> ${deity.personality.join(", ")}</p>
+            <p><strong>Devoted Guilds:</strong> ${deity.devoted_guilds.join(", ")}</p>
         `;
 
+        // Append to the correct deity container
         container.appendChild(deityElement);
     });
 }
+
 
 
 
