@@ -62,19 +62,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const contactDropdown = document.getElementById("contactDropdown");
 
     if (contactBtn && contactDropdown) {
+        function positionDropdown() {
+            // Fix the dropdown position 320px above the bottom and 1000px from the left side
+            contactDropdown.style.position = "fixed"; // Ensure fixed positioning
+            contactDropdown.style.bottom = "63px"; // 320px above the bottom
+            contactDropdown.style.left = "235px"; // 1000px from the left edge
+        }
+
+        // Show dropdown on button click
         contactBtn.addEventListener("click", function () {
-            const rect = contactBtn.getBoundingClientRect();
-            
-            // Set dropdown position dynamically and ensure it stays on screen
-            contactDropdown.style.position = "absolute"; // Ensures absolute positioning
-            contactDropdown.style.top = `${rect.top - contactDropdown.offsetHeight}px`;  // Move it above the button
-            contactDropdown.style.left = `${rect.left}px`;
-
-            // Check if the dropdown is out of view at the top of the page
-            if (parseInt(contactDropdown.style.top) < 0) {
-                contactDropdown.style.top = `${rect.bottom}px`;  // If too high, position it below the button
-            }
-
+            positionDropdown(); // Reposition dropdown on click
+            // Toggle visibility
             contactDropdown.style.display = contactDropdown.style.display === "block" ? "none" : "block";
         });
 

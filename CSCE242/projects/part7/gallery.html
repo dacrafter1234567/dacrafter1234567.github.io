@@ -215,9 +215,48 @@
                 </div>
             </main>
             <footer>
-                <p>&copy; Collin Floyd / Dacrafter1</p>
+                <div class="flex-container">
+                    <section>
+                        <div class="footerleft">
+                            <div class="flex-container">
+                                <section>
+                                <div class="footercopy">
+                                    <p>&copy; Collin Floyd / Dacrafter1</p>
+                                </div>
+                                </section>
+                                <section>
+                                <div class="footercontact">
+                                            <button id="contactbtn" class="contactbtn"><p>Contact Us</p></button>
+                                    <div id="contactDropdown" class="dropdown">
+                                        <form method="POST" id="form">
+                
+                                            <input type="hidden" name="access_key" value="23843a76-4818-4d48-8be1-e6ca08a551e9">
+                                            <h4>Subject</h4>
+                                            <input type="text" name="name" required>
+                                            <h4>Your Email</h4>
+                                            <input type="email" name="email" required>
+                                            <h4>Message</h4>
+                                            <textarea name="message" required></textarea>
+                                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;"><br>
+                                        
+                                            <button type="submit">Submit Form</button>
+                                        
+                                            <div id="result"></div>
+                                        
+                                        </form>
+                                    </div>
+                                </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="footerblank"></div>
+                    </section>
+                </div>
             </footer>
         </div>
         <script src="script.js"></script>
+        <script src="contactus.js"></script>
     </body>
 </html>

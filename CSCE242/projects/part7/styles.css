@@ -36,8 +36,8 @@ img[src=images/arconiamap]{
 
 .logocol h2{
     color: white;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     margin-left: 5px;
     text-align: center;
 }
@@ -267,6 +267,10 @@ table tr:last-child td:last-child {
     display: flex;
 }
 
+.resources{
+    margin-top: 40px;
+}
+
 
 .discordstaff{
     margin-top: 0;
@@ -328,12 +332,11 @@ a{
 
 
 footer{
-    display:inline-flex;
+    display:flex;
     color:white;
     width: 100%;
     height: 100%;
     background-color: #051f40;
-    margin-top: -9px;
     padding: 0;
 }
 
@@ -341,6 +344,19 @@ footer p{
     padding-left: 50px;
     vertical-align: auto;
 }
+
+.footercopy{
+    flex: 1;
+    margin-right: 20px;
+    padding-top: 5px;
+
+}
+
+.footercontact{
+    flex: 1;
+    justify-content: left;
+}
+
 
 .hidden {
     display: none;
@@ -350,11 +366,12 @@ footer p{
     background:none;
     border: none;
     margin-top: 3px;
+    margin-bottom: 5px;
     cursor: pointer;
 }
 
 .contactbtn {
-    background-color: #021a36;
+    background-color:#051f40;
     color: white;
     padding: 10px;
     border: none;
@@ -362,7 +379,7 @@ footer p{
 }
 
 .contactbtn:hover {
-    background-color: #051f40;
+    background-color:#021a36;
 }
 
 input {
@@ -403,18 +420,36 @@ input::placeholder{
     right: 5px;
 }
 
-#contactDropdown {
-    position: absolute;  /* Positions relative to nearest positioned ancestor */
-    left: 50%;  /* Centers it */
-    transform: translateX(-50%);  /* Ensures centering */
-    background: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    display: none;  /* Initially hidden */
-    z-index: 1000;  /* Ensures it's above the footer */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+#contactbtn {
+    display: inline-flex;          /* Use flexbox to easily center text */
+    justify-content: center;       /* Center horizontally */
+    align-items: center;           /* Center vertically */
 }
 
+#contactbtn p{
+    margin-right: 60px;
+}
+
+#contactDropdown {
+    position: absolute;
+    display: none; /* Ensure it’s hidden initially */
+}
+
+
+
+#contactDropdown h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    width: 98%;
+    height: 75px;
+}
+
+input{
+    margin: 2px;
+}
 
 /* Ensure the input fields don't shift content */
 input:focus {
