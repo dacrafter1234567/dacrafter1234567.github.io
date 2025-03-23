@@ -403,10 +403,18 @@ input::placeholder{
     right: 5px;
 }
 
-#contractDropdown {
-    top: 1px;
-    right: 1px;
+#contactDropdown {
+    position: absolute;  /* Positions relative to nearest positioned ancestor */
+    left: 50%;  /* Centers it */
+    transform: translateX(-50%);  /* Ensures centering */
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;  /* Initially hidden */
+    z-index: 1000;  /* Ensures it's above the footer */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Ensure the input fields don't shift content */
 input:focus {

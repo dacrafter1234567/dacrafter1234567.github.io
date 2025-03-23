@@ -9,59 +9,72 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(data => {
             console.log("Deities Loaded:", data);
-            displayDeities(data.deities); // ✅ Fix: Access the array inside the object
+            displayDeities(data.deities); // ✅ Ensure data is structured correctly
         })
         .catch(error => {
             console.error("Error loading JSON:", error);
         });
-});
 
-const form = document.getElementById('form');
-const result = document.getElementById('result');
+    // Form submission handling
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const object = Object.fromEntries(formData);
-  const json = JSON.stringify(object);
-  result.innerHTML = "Please wait..."
+    if (form && result) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            result.innerHTML = "Please wait...";
 
-    fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                result.innerHTML = "Form submitted successfully";
-            } else {
-                console.log(response);
-                result.innerHTML = json.message;
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            result.innerHTML = "Something went wrong!";
-        })
-        .then(function() {
-            form.reset();
-            setTimeout(() => {
-                result.style.display = "none";
-            }, 3000);
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status === 200) {
+                    result.innerHTML = "Form submitted successfully";
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+            })
+            .finally(() => {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            });
         });
-});
+    }
 
-document.addEventListener("DOMContentLoaded", function () {
+    // 📌 Dropdown Menu Logic
     const contactBtn = document.getElementById("contactbtn");
     const contactDropdown = document.getElementById("contactDropdown");
 
     if (contactBtn && contactDropdown) {
         contactBtn.addEventListener("click", function () {
-            // Toggle dropdown visibility
+            const rect = contactBtn.getBoundingClientRect();
+            
+            // Set dropdown position dynamically and ensure it stays on screen
+            contactDropdown.style.position = "absolute"; // Ensures absolute positioning
+            contactDropdown.style.top = `${rect.top - contactDropdown.offsetHeight}px`;  // Move it above the button
+            contactDropdown.style.left = `${rect.left}px`;
+
+            // Check if the dropdown is out of view at the top of the page
+            if (parseInt(contactDropdown.style.top) < 0) {
+                contactDropdown.style.top = `${rect.bottom}px`;  // If too high, position it below the button
+            }
+
             contactDropdown.style.display = contactDropdown.style.display === "block" ? "none" : "block";
         });
 
@@ -72,51 +85,4 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-});
-
-
-// Dropdown Menu Handling
-function setupDropdowns() {
-    const contactbtn = document.getElementById("contactbtn");
-    const contactDropdown = document.getElementById("contactDropdown");
-
-
-    if (contactbtn && contactDropdown) {
-        contactbtn.addEventListener("click", () => toggleDropdown(contactDropdown));
-    }
-
-    // Hide dropdowns when clicking outside
-    document.addEventListener("click", function (event) {
-        if (contactbtn && contactDropdown && !contactbtn.contains(event.target) && !contactDropdown.contains(event.target)) {
-            contactDropdown.style.display = "none";
-        }
-    });
-}
-
-// Toggle Dropdown Visibility
-function toggleDropdown(element) {
-    if (element) {
-        element.style.display = element.style.display === "block" ? "none" : "block";
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    const contactBtn = document.getElementById("contactbtn");
-    const contactDropdown = document.getElementById("contactDropdown");
-
-    contactBtn.addEventListener("click", function() {
-        // Toggle dropdown visibility
-        if (contactDropdown.style.display === "block") {
-            contactDropdown.style.display = "none";
-        } else {
-            contactDropdown.style.display = "block";
-        }
-    });
-
-    // Optional: Hide dropdown when clicking outside
-    document.addEventListener("click", function(event) {
-        if (!contactBtn.contains(event.target) && !contactDropdown.contains(event.target)) {
-            contactDropdown.style.display = "none";
-        }
-    });
 });
