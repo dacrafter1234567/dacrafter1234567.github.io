@@ -1,0 +1,768 @@
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    background-color: black;
+    margin-bottom: 0;
+    background-image: url(images/arconiamapgradient.png);
+    background-size: cover;
+    background-position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+img[src=images/arconiamap]{
+    width: 10px;
+    margin-top: 500px;
+}
+
+#main-header{
+    background-color: #051f40;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.logocol{
+    flex: 1;
+}
+
+.logocol h2{
+    color: white;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.logocol h2:hover{
+    color: #021a36;
+}
+
+.col9of14{
+    flex: 10;
+}
+
+.col9of14 hr{
+    margin-top: 23px;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+
+.searchcol{
+    flex: 2;
+    display: none;
+}
+
+.searchcol img{
+    margin-bottom: -7px;
+}
+
+
+.searchiconcol{
+    flex: 2;
+    margin: auto;
+    text-align: right;
+}
+
+.searchiconcol img{
+    width: 35px;
+    margin: 0;
+    margin-bottom: -7px;
+}
+
+.logincol{
+    flex: 1;
+}
+
+.logincol h2{
+    color: white;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.logincol h2:hover{
+    color: #021a36;
+}
+
+.logocol, .col9of14, .searchcol, .logincol{
+    padding: 5px;
+    margin: 5px;
+}
+
+.headerimage{
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    background-image: none;
+    
+}
+
+main{
+    margin-top: 290px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    background-color: #202020;
+    display: absolute;
+    padding: 40px;
+    padding-top: 1px;
+}
+
+.bigleft{
+    flex: 5;
+    background-color: #202020;
+    margin-bottom: 0;
+}
+
+.smallright{
+    display: none;
+    flex: 1;
+    background-color: #202020;
+    margin-top: -40px;
+    margin-bottom: 0;
+    margin-left: 3%;
+}
+
+
+.wikiintro{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+}
+
+
+.wikinav{
+    justify-content: right;
+    text-align: right;
+    display: none;
+    flex: 1;
+}
+
+.largereswikinav{
+    display: flex;
+}
+
+.undernavtext{
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 0;
+    color: white;
+}
+
+table {/* All this table tuff is taken from https://www.htmltables.io/blog/how-to-make-an-html-table-with-rounded-corners*/
+    font-family: arial, sans-serif;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: white;
+  }
+  
+  td, th {
+    padding: 0.5rem;
+  }
+
+  td{
+    text-align: center;
+  }
+
+  th{
+    background-color: #d4a03a;
+  }
+  
+th, td {
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    padding: 0.5rem;
+  }
+
+table tr td:first-child, 
+table tr th:first-child {
+  border-left: 1px solid white;
+}
+
+table tr th {
+    border-top: 1px solid white;
+  }
+
+table tr:first-child th:first-child {
+    border-top-left-radius: 0.5rem;
+  }
+  
+table tr:first-child th:last-child {
+    border-top-right-radius: 0.5rem;
+  }
+  
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 0.5rem;
+  }
+  
+  
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 0.5rem;
+  }
+  
+  
+  
+
+.righttable{
+    display: flex;
+    margin: 30px;
+    flex:1;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.righttable img{
+    margin: 8px;
+}
+
+.righttable p{
+    margin-top: 5px;
+}
+
+.righttable h4{
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 0;
+
+}
+
+.user{
+    color: #3084d4;
+    margin-top: 10px;
+    margin-left: 25px;
+    text-align: left;
+}
+
+
+.pageportal img{
+    border: solid 1px white;
+  }
+
+.righttable1 img{
+    border: solid 1px white;
+  }
+
+.pageportalitems{
+    padding: 10px;
+    margin: 0;
+}
+
+.column{
+    flex-wrap: wrap;
+    display: flex;
+}
+
+
+.discordstaff{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.bottomstaff h4{
+    margin-left: 20px;
+    text-align: left;
+}
+
+
+.bottommobilestuff{
+    padding-bottom: 60px;
+    display: block;
+    background-color: #202020;
+}
+
+.bottomdiscord{
+    flex: 1;
+    margin: 4%;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.bottomdiscord img{
+    width: 95%;
+}
+
+.bottomstaff{
+    flex: 1;
+    margin: 4%;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 200px;
+}
+
+.portal{
+    justify-content: center;
+    display: block;
+    flex: 1;
+    margin: 10px;
+}
+
+.portal img{
+    width: 125px;
+    height: 120px;
+}
+
+.portal p{
+    margin-top: 5px;
+    color:#d4a03a;
+    font-size: small;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+footer{
+    display:inline-flex;
+    color:white;
+    width: 100%;
+    height: 100%;
+    background-color: #051f40;
+    margin-top: -9px;
+    padding: 0;
+}
+
+footer p{
+    padding-left: 50px;
+    vertical-align: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.signinbtn {
+    background:none;
+    border: none;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.contactbtn {
+    background-color: #021a36;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.contactbtn:hover {
+    background-color: #051f40;
+}
+
+input {
+    height: 20px;
+    width: 95%;
+    padding: 5px;
+    background-color: #98958b8b;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input::placeholder{
+    color: white;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color:#d4a03a;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: .5rem;
+    width: 200px;
+}
+
+/* Positioning for dropdowns */
+#searchDropdown {
+    top: 65px;
+    right: -75px;
+    transform: translateX(-50%);
+}
+
+#signinDropdown {
+    top: 65px;
+    right: 5px;
+}
+
+#contractDropdown {
+    top: 1px;
+    right: 1px;
+}
+
+/* Ensure the input fields don't shift content */
+input:focus {
+    outline: none;
+}
+
+/* Add cursor when hovering over inputs */
+input:hover {
+    cursor: text;
+}
+
+.logoimg{
+    margin-top: -75px;
+    width: 400px;
+    border: 3px solid #d4a03a;
+    border-radius: 15px;
+}
+
+/* Gallery Specific */
+.roundabout img{
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.gallerypics{
+    width: 400px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 0;
+    background-color: antiquewhite;
+    color: #202020;
+    display: block;
+}
+
+.gallerypics img{
+    width: 100%;
+}
+
+.gallerypics p{
+    color: #202020;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Items Specific */
+.itembar{
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 3%;
+    background-color: antiquewhite;
+    color: #202020;
+}
+
+.itemimg{
+    flex: 1;
+    margin: 0;
+    display: inline;
+}
+
+.itemimg img{
+    width: 200px;
+    display: inline;
+}
+
+.leftimg{
+    text-align: left;
+}
+
+.rightimg{
+    text-align: right;
+}
+
+.itemdesc{
+    flex: 4;
+    text-align: left;
+    margin-left: 30px
+}
+
+.itemcol{
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.itemcol img{
+    width: 200px;
+    margin-top: 5px;
+}
+
+/* Slideshow Stuff */
+#slideshow{
+    position: relative;
+    height: 300px;
+    width: 80%;
+    padding: 10px;
+    background-color: #161616;
+    margin: auto;
+}
+
+#slideshow img {
+    height: 100%;
+}
+
+#galleryslideshow{
+    position: relative;
+    height: 150px;
+    width: 80%;
+    padding: 10px;
+    background-color: #161616;
+    margin: auto;
+}
+
+#galleryslideshow img {
+    height: 100%;
+}
+
+.arrowbutton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  #prev { left: 5px; }
+  #next { right: 5px; }
+
+
+
+
+/* Characters Specific */
+
+.characterbar{
+    width: 300px;
+    border-radius: 5px;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 20px;
+    color: #202020;
+}
+
+.character{
+    display: block;
+    margin: 10px;
+    flex: 1;
+    border:3px solid #d4a03a;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    color: black;
+    min-width: 400px;
+}
+
+.chardesc{
+    flex: 4;
+    text-align: left;
+    margin-left: 30px;
+    text-wrap: wrap;
+}
+
+.charcol{
+    display: block;
+}
+
+.charcol img{
+    margin-top: 20px;
+    height: 100%;
+    width: auto;
+}
+
+.charcol p{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.largecol{
+    display: none;
+}
+
+.character img{
+    height: 300px;
+    width:fit-content;
+}
+
+
+/* Domains Specific*/
+
+.deitybar{
+    width: 100%;
+    border: 4px solid #d4a03a;
+    border-radius: 5px;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: antiquewhite;
+    color: #202020;
+    justify-content: center;
+}
+
+.deityimg{
+    flex: 1;
+    margin: 13%;
+    margin-top: 5%;
+    margin-bottom: 0;
+    text-align: center;
+    margin: auto;
+
+   
+}
+
+.deityimg img{
+    height: 100%;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+.deitydesc{
+    flex: 4;
+    text-align: left;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 300px;
+    min-width: 300px;
+}
+
+
+
+/* Navigation */
+
+
+
+
+
+
+@media (min-width: 700px) {
+
+    .flex-container {
+        display: flex;
+    }
+
+    .searchcol{
+        display: flex;
+    }
+
+    .searchiconcol{
+        display: none;
+    }
+
+    main{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .pageportalitems section{
+        max-width: 50%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .roundabout img{
+        width: 90%;
+    }
+
+    .bottommobilestuff{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .charcol{
+        display: none;
+    }
+
+    .itemcol{
+        display: none;
+    }
+
+    .largecol{
+        display: flex;
+    }
+
+    #galleryslideshow{
+        height: 200px;
+    }
+
+   
+}
+
+
+@media (min-width: 875px) {
+
+    .wikiintro{
+        text-align: left;
+        justify-content: left;
+    }
+
+    .wikinav{
+        display: flex;
+    }
+
+    .largereswikinav{
+        display: none;
+    }
+
+
+    .pageportalitems section{
+        max-width: 60%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .roundabout img{
+        width: 80%;
+    }
+
+    #galleryslideshow{
+        height: 300px;
+    }
+
+    
+
+    
+}
+
+@media (min-width: 1250px) {
+    
+    .smallright{
+        display: block;
+    }
+
+    .pageportalitems{
+        display: block;
+    }
+
+    .pageportalitems section{
+        max-width: 80%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .bottommobilestuff{
+        display: none;
+    }
+
+    .roundabout img{
+        width: 70%;
+    }
+}

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Arconia Character Gallery</title>
+    </head>
+
+    <body>
+        <div id="content">
+            <header id="main-header">
+                <div class="flex-container">
+                    <section class="logocol">
+                        <table>
+                            <th>
+                                <a href="#"><h2>Home</h2></a> 
+                            </th>
+                        </table>             
+                    </section>
+                    <section class="col9of14"><hr></section>
+                    
+                    <!-- Search Icon -->
+                    <section class="searchiconcol">
+                        <table>
+                            <th>
+                                <a href="#" id="searchIcon"><img src="images/searchicon.png"></a> 
+                            </th>
+                        </table>
+                        <div id="searchDropdown" class="dropdown">
+                            <input type="text" id="searchInput" placeholder="Search...">
+                        </div>
+                    </section>
+            
+                    <section class="searchcol">
+                        <table>
+                            <th>
+                                <input type="text" id="searchInput" placeholder="Search...">
+                            </th>
+                        </table>
+                    </section>
+
+                    <!-- Sign In Button -->
+                    <section class="logincol">
+                        <table>
+                            <th>
+                                <button class="signinbtn" id="signinbtn"><h2>Sign In</h2></button>
+                            </th>
+                        </table>
+                        <div id="signinDropdown" class="dropdown">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                        </div>
+                    </section>
+                </div>
+            </header>
+
+
+            <main class="main-content">
+                <div class="undernavtext">
+                    <a href="index.html"><img src="images/ArconiaLogo.jpg" class="logoimg"></a>
+                    <h2>Welcome to the World of Arconia Wiki!</h2>
+                    <p>This wiki is an extenxive archive that documents information about the world. 
+                        We make efforts to make this wiki as resourceful and informative as possible.</p>
+                    <p><b>The World of Arconia is a fantasy world inspired by Critical Role's Exandria.
+                        Its diverse world is split into eight different continents, each containing their own distinct cutures, kingdoms, and history.
+                        From characters to curses, artifacts to affinities, this wiki will cover everything there is to know about Arconia as it's developed.</b>
+                    </p>
+                </div>
+
+                <div class="flex-container">
+                    <div class="bigleft">
+                        <div class="pageportal">
+                            <table>
+                                <tr><th>Characters Archive</th></tr>
+                                <tr>
+                                    <td>
+                                        <section id="slideshow">
+                                            <button id="prev" class="arrowbutton" onclick="prevSlide()">&#10094;</button>
+                                            <img src="images/HeliaMayr.jpg" class="slide">
+                                            <img src="images/KaravelleDevantine.jpg" class="slide hidden">
+                                            <img src="images/Slate.png" class="slide hidden">
+                                            <img src="images/CodyDe'Airos.jpg" class="slide hidden">
+                                            <img src="images/AdonisDestrey.jpg" class="slide hidden">
+                                            <button id="next" class="arrowbutton" onclick="nextSlide()">&#10095;</button>
+                                        </section>
+
+                                        <div class="column example">
+                                            <section class="character">
+                                                <div class="charcol">
+                                                    <img src="images/HeliaMayr.jpg">
+                                                    <h4>Name: Helia Mayr</h4>
+                                                    <p>Class Composition: Fighter 11 (Rune Knight), Monk 4 (Four Elements), Paladin 3 (Heroism), Warlock 2 (Hexblade)</p>
+                                                    <p>47 y/o Reborn Fire Genasi</p>
+                                                    <p>Affinity: Phoenix</p>
+                                                    <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                </div>
+                                                <div class="largecol">
+                                                    <section class="charimg">
+                                                        <img src="images/HeliaMayr.jpg">
+                                                    </section>
+                                                    <section class="chardesc">
+                                                        <h4>Name: Helia Mayr</h4>
+                                                        <p>Class Composition: Fighter 11 (Rune Knight), Monk 4 (Four Elements), Paladin 3 (Heroism), Warlock 2 (Hexblade)</p>
+                                                        <p>47 y/o Reborn Fire Genasi</p>
+                                                        <p>Affinity: Phoenix</p>
+                                                        <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                    </section>
+                                                </div>
+                                            </section>
+                                            <section class="character">
+                                                <div class="charcol">
+                                                    <img src="images/Slate.png">
+                                                    <h4>Name: Slate "Red" Circan Finnley</h4>
+                                                    <p>Class Composition: Artificer 16 (Forge Adept)</p>
+                                                    <p>28 (263) y/o Reborn</p>
+                                                    <p>Affinity: Metal</p>
+                                                    <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                </div>
+                                                <div class="largecol">
+                                                    <section class="itemimg leftimg">
+                                                        <img src="images/Slate.png">
+                                                    </section>
+                                                    <section class="chardesc">
+                                                        <h4>Name: Slate "Red" Circan Finnley</h4>
+                                                        <p>Class Composition: Artificer 16 (Forge Adept)</p>
+                                                        <p>28 (263) y/o Reborn</p>
+                                                        <p>Affinity: Metal</p>
+                                                        <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                    </section>
+                                                </div>
+                                            </section>
+                                            <section class="character">
+                                                <div class="charcol">
+                                                    <img src="images/KaravelleDevantine.jpg">
+                                                    <h4>Name: Karavelle Devantine</h4>
+                                                    <p>Class Composition: Rogue 12 (Inquisitive), Barbarian 5 (Zealot), Fighter 3 (Champion)</p>
+                                                    <p>358 y/o Reborn Avariel Elf</p>
+                                                    <p>Affinity: Destruction</p>
+                                                    <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                </div>
+                                                <div class="largecol">
+                                                    <section class="itemimg leftimg">
+                                                        <img src="images/KaravelleDevantine.jpg">
+                                                    </section>
+                                                    <section class="chardesc">
+                                                        <h4>Name: Karavelle Devantine</h4>
+                                                        <p>Class Composition: Rogue 12 (Inquisitive), Barbarian 5 (Zealot), Fighter 3 (Champion)</p>
+                                                        <p>358 y/o Reborn Avariel Elf</p>
+                                                        <p>Affinity: Destruction</p>
+                                                        <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                    </section>
+                                                </div>
+                                            </section>
+                                            <section class="character">
+                                                <div class="charcol">
+                                                    <img src="images/AdonisDestrey.jpg">
+                                                    <h4>Name: Adonis Destrey</h4>
+                                                    <p>Class Composition: Paladin 20 (Redemption), Cleric 10 (Blood-Reworked)</p>
+                                                    <p>1064 y/o Kalashtar</p>
+                                                    <p>Affinity: Blood</p>
+                                                    <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                </div>
+                                                <div class="largecol">
+                                                    <section class="itemimg leftimg">
+                                                        <img src="images/AdonisDestrey.jpg">
+                                                    </section>
+                                                    <section class="chardesc">
+                                                        <h4>Name: Adonis Destrey</h4>
+                                                        <p>Class Composition: Paladin 20 (Redemption), Cleric 10 (Blood-Reworked)</p>
+                                                        <p>1064 y/o Kalashtar</p>
+                                                        <p>Affinity: Blood</p>
+                                                        <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                    </section>
+                                                </div>
+                                            </section>
+                                            <section class="character">
+                                                <div class="charcol">
+                                                    <img src="images/CodyDe'Airos.jpg">
+                                                    <h4>Name: Cody De'Airos</h4>
+                                                    <p>Class Composition: Warlock 15 (Raven Queen)</p>
+                                                    <p>48 y/o Beasthide Shifter</p>
+                                                    <p>Affinity: Sound</p>
+                                                    <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                </div>
+                                                <div class="largecol">
+                                                    <section class="itemimg leftimg">
+                                                        <img src="images/CodyDe'Airos.jpg">
+                                                    </section>
+                                                    <section class="chardesc">
+                                                        <h4>Name: Cody De'Airos</h4>
+                                                        <p>Class Composition: Warlock 15 (Raven Queen)</p>
+                                                        <p>48 y/o Beasthide Shifter</p>
+                                                        <p>Affinity: Sound</p>
+                                                        <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                    </section>
+                                                </div>
+                                            </section>
+                                            <section class="character">
+                                                <div class="charcol">
+                                                    <img src="images/OrionSteele.png">
+                                                    <h4>Name: Orion Steele</h4>
+                                                    <p>Class Composition: Figher 20 (Battle Master)</p>
+                                                    <p>35 y/o Human</p>
+                                                    <p>Affinity: Earth</p>
+                                                    <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                </div>
+                                                <div class="largecol">
+                                                    <section class="itemimg leftimg">
+                                                        <img src="images/OrionSteele.png">
+                                                    </section>
+                                                    <section class="chardesc">
+                                                        <h4>Name: Orion Steele</h4>
+                                                        <p>Class Composition: Figher 20 (Battle Master)</p>
+                                                        <p>35 y/o Human</p>
+                                                        <p>Affinity: Earth</p>
+                                                        <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                    </section>
+                                                </div>
+                                            </section>
+                                            <section class="character">
+                                                <div class="charcol">
+                                                    <img src="images/FelixAtol.png">
+                                                    <h4>Name: Felix Atol</h4>
+                                                    <p>Class Composition: Wizard 20 (Dunamancy)</p>
+                                                    <p>47 y/o Kalashtar</p>
+                                                    <p>Affinity: Gravity</p>
+                                                    <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                </div>
+                                                <div class="largecol">
+                                                    <section class="itemimg leftimg">
+                                                        <img src="images/FelixAtol.png">
+                                                    </section>
+                                                    <section class="chardesc">
+                                                        <h4>Name: Felix Atol</h4>
+                                                        <p>Class Composition: Wizard 20 (Dunamancy)</p>
+                                                        <p>47 y/o Kalashtar</p>
+                                                        <p>Affinity: Gravity</p>
+                                                        <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                    </section>
+                                                </div>
+                                            </section>
+                                            <section class="character">
+                                                <div class="charcol">
+                                                    <img src="images/JosephUru.png">
+                                                    <h4>Name: Joseph Uru</h4>
+                                                    <p>Class Composition: Wizard 20 (Conjuration)</p>
+                                                    <p>26 y/o Human</p>
+                                                    <p>Affinity: Creation</p>
+                                                    <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                </div>
+                                                <div class="largecol">
+                                                    <section class="itemimg leftimg">
+                                                        <img src="images/JosephUru.png">
+                                                    </section>
+                                                    <section class="chardesc">
+                                                        <h4>Name: Joseph Uru</h4>
+                                                        <p>Class Composition: Wizard 20 (Conjuration)</p>
+                                                        <p>26 y/o Human</p>
+                                                        <p>Affinity: Creation</p>
+                                                        <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                    </section>
+                                                </div>
+                                            </section>
+                                            <section class="character">
+                                                <div class="charcol">
+                                                    <img src="images/EiselVoross.jpg">
+                                                    <h4>Name: Eisel Voross</h4>
+                                                    <p>Class Composition: Fighter 20 (Rune Knight)</p>
+                                                    <p>36 y/o Ice Genasi</p>
+                                                    <p>Affinity: Ice</p>
+                                                    <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                </div>
+                                                <div class="largecol">
+                                                    <section class="itemimg leftimg">
+                                                        <img src="images/EiselVoross.jpg">
+                                                    </section>
+                                                    <section class="chardesc">
+                                                        <h4>Name: Eisel Voross</h4>
+                                                        <p>Class Composition: Fighter 20 (Rune Knight)</p>
+                                                        <p>36 y/o Ice Genasi</p>
+                                                        <p>Affinity: Ice</p>
+                                                        <!--<p>[description dropdown] &#x25BE;</p>-->
+                                                    </section>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="smallright">
+                        <div class="flex-container">
+                            <div class="pageportal">
+                                <table>
+                                    <div class="pageportalitems">
+                                        <div class="flex-container">
+                                            <section>
+                                                <table class="bottomdiscord">
+                                                    <tr><th>Arconia Discord</th></tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#"><img src="images/discordlogo.png"></a>
+                                                            <p>Join the World of Arconia's Discord! It has the developers of the setting, early access to new content, announcements/updates, and more!</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </section>
+                                            <section>
+                                                <table class="bottomstaff">
+                                                    <tr><th>Staff</th></tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h4>Creators</h4>
+                                                            <p class="user">Collin / Dacrafter1</p>
+                                                            <h4>Admins</h4>
+                                                            <p class="user">Collin / Dacrafter1</p>
+                                                            <h4>Mapmakers</h4>
+                                                            <p class="user">Collin / Dacrafter1</p>
+                                                            <h4>Editors</h4>
+                                                            <p class="user">Collin / Dacrafter1</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottommobilestuff">
+                    <div class="flex-container">
+                        <div class="column example">
+                            <section class="bottomdiscord">
+                                <table>
+                                    <tr><th>Arconia Discord</th></tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#"><img src="images/discordlogo.png"></a>
+                                            <p>Join the World of Arconia's Discord! It has the developers of the setting, early access to new content, announcements/updates, and more!</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </section>
+                            <section class="bottomstaff">
+                                <table>
+                                    <tr><th>Staff</th></tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Creators</h4>
+                                            <p class="user">Collin / Dacrafter1</p>
+                                            <h4>Admins</h4>
+                                            <p class="user">Collin / Dacrafter1</p>
+                                            <h4>Mapmakers</h4>
+                                            <p class="user">Collin / Dacrafter1</p>
+                                            <h4>Editors</h4>
+                                            <p class="user">Collin / Dacrafter1</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <p>&copy; Collin Floyd / Dacrafter1</p>
+            </footer>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

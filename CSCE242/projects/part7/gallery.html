@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Arconia Locations Gallery</title>
+    </head>
+
+    <body>
+        <div id="content">
+            <header id="main-header">
+                <div class="flex-container">
+                    <section class="logocol">
+                        <table>
+                            <th>
+                                <a href="index.html"><h2>Home</h2></a> 
+                            </th>
+                        </table>             
+                    </section>
+                    <section class="col9of14"><hr></section>
+                    
+                    <!-- Search Icon -->
+                    <section class="searchiconcol">
+                        <table>
+                            <th>
+                                <a href="#" id="searchIcon"><img src="images/searchicon.png"></a> 
+                            </th>
+                        </table>
+                        <div id="searchDropdown" class="dropdown">
+                            <input type="text" id="searchInput" placeholder="Search...">
+                        </div>
+                    </section>
+            
+                    <section class="searchcol">
+                        <table>
+                            <th>
+                                <input type="text" id="searchInput" placeholder="Search...">
+                            </th>
+                        </table>
+                    </section>
+
+                    <!-- Sign In Button -->
+                    <section class="logincol">
+                        <table>
+                            <th>
+                                <button class="signinbtn" id="signinbtn"><h2>Sign In</h2></button>
+                            </th>
+                        </table>
+                        <div id="signinDropdown" class="dropdown">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                        </div>
+                    </section>
+                </div>
+            </header>
+
+
+            <main class="main-content">
+                <div class="undernavtext">
+                    <a href="index.html"><img src="images/ArconiaLogo.jpg" class="logoimg"></a>
+                    <h2>Welcome to Arconia: Loations Archive.</h2>
+                    <p>This page is dedicated to the many diverse regions of the world. Some images
+                        depict large regions of the world, portraying a general setting.<br>
+                        Others may illustrate concept images for, or canonical portrayals of cities, landmarks and more.
+                    </p>
+                    <p><b>Copyright Disclaimer:<br>
+                        The content used in this wiki is intended for educational and informational purposes only.<br>
+                        All rights to the images and other materials used belong to their respective owners.<br>
+                        I do not claim ownership over any third-party content used.</b>
+                    </p><br>
+                </div>
+               
+               
+               
+                <div class="flex-container">
+                    <div class="bigleft">
+                        <div class="pageportal">
+                            <table>
+                                <tr><th>Images Archive</th></tr>
+                                <tr>
+                                    <td>
+                                        <section id="galleryslideshow">
+                                            <button id="prev" class="arrowbutton" onclick="prevSlide()">&#10094;</button>
+                                            <img src="images/AzureVail.jpg" class="slide">
+                                            <img src="images/BalastoneQuarry.jpg" class="slide hidden">
+                                            <img src="images/Frostvale.png" class="slide hidden">
+                                            <img src="images/GravitasStronghold.png" class="slide hidden">
+                                            <button id="next" class="arrowbutton" onclick="nextSlide()">&#10095;</button>
+                                        </section>
+                                        <div class="column example">
+                                            <section class="gallerypics">
+                                                <img src="images/AzureVail.jpg">
+                                                <h4>The Azure Vail</h4>
+                                                <p>Located at the heart of the Cerulean Passage, The Azure Vail stands as both a defensive measure and border control of Ralkor's only strait connecting its inner sea to the Visauren Ocean. The Vail, stretching all the way from Tidehaven to Port Atlas, consists of hundreds of reinforced pillars with spans of magically raised tide walls conjured and maintained by the elders of Tidehaven. The pillars and tide walls span from the bottom of the ocean to more than 50 meters above sea level, creating a barrier deterring all submersibles, unwanted creatures of the sea, and enemy vessels from passing. Every five to ten miles across the span of the span of the Vail, and every one mile close to the coast, exists a fortress with a vast opening for vessel passage. These passages function as both a border check and bottleneck for seafaring travel, ensuring that incoming and outgoing trading flows smoothly with less risk of smuggling, while also constricting potential threats.
+                                                </p>
+                                            </section>
+                                            <section class="gallerypics">
+                                                <img src="images/BalastoneQuarry.jpg">
+                                                <h4>Balastone Quarry</h4>
+                                                <p>Located in the Great Mesas, a highland region in Northwest Veriloft, Balastone Quarry contains one of the most valuable resources of the world, and Veriloft's highest valued export. Stretching miles under the surface, the quarry harvests a precious red gem from massive crystal formations, some of which may even stretch thousands of meters in height. The invaluable Balastone gem gained its name due to its prized properties. While inert, Balastone serves as a source of stabilization in both sea and air vessels. In its normal state, the gem has a peculiar inertia, which increases further with sharp acceleration and deceleration, causing more force to be applied to move it than it should for its mass, as it resists movement in air and water. Its second, and even more valued property, whenever Balastone encounters any form of energy, its inertia property decreases, along with its mass. So much so, that it causes the gem to flow in the opposite direction of gravity at a rapid rate. Because of this, widely known uses of this substance includes floating platforms, elevators, and skyships, which are incredibly useful for transportation and trade. </p>
+                                            </section>
+                                            <section class="gallerypics">
+                                                <img src="images/Frostvale.png">
+                                                <h4>Frostvale</h4>
+                                                <p>Found on the northwest coast of Ralkor's Cerulean Passage, the port city of Frostvale is the dedicated settlement for those who use the powers of, or wish to learn about the domain of Ice. The residents of this city are typically very friendly to outsiders, though training for those who wish to learn the elemental powers of ice has been deemed quite harsh. Despite being located on the equator of Arconia, Frostvale maintains a permanent winter stretching miles out around the city. While Frostvale does require imports and exports, trade can oftentimes be delayed or impossible due to the frozen waters that occasionally develop around the coast. However, as a defensive measure during times of war, this ice can be purposefully extended and reinforced, causing a blockade from coast to coast across the Cerulean Passage. </p>
+                                            </section>
+                                            <section class="gallerypics">
+                                                <img src="images/GravitasStronghold.png">
+                                                <h4>Levitas Stronghold</h4>
+                                                <p>Levitas Stronghold, the dedicated city to those who use the powers of, or wish to learn about the domain of Gravity can be found a few miles inland to the far southwest coast of Ralkor. Created as a result of an ancient battle of the Archon War, the terrain of Levitas remains broken and shattered. During this battle, the deity of gravity, Legyryx, was in a clash so fierce that her very essence shaped the area around her, causing massive portions of the surrounding mountains and terrain to eternally float in place. Because of this, worshipers of Legyryx have built their sanctuary within this gravity defying spectacle. </p>
+                                            </section>
+                                            <section class="gallerypics">
+                                                <img src="images/PyhrraicMountains.jpg">
+                                                <h4>The Pyhrraic Mountains</h4>
+                                                <p>To the northwest coast of Ralkor, there lies a region of blazing crags, ever-active volcanos, and flowing rivers of magma. The Pyhrraic Mountains host all manner of fiery fauna and flora, creating a beautifully dangerous environment in which very few settlements can be found. The few cities that are located within this region are Cinderpeak, Emberfall, and Crimson Hollow, two of which are cities dedicated to those who use the powers of, or wish to learn about the domains of fire and smoke. Trade in this region is very minimal, so the residents who live here have become self-sufficient, as to not rely on outside aid if at all possible. 
+                                                </p>
+                                            </section>
+                                            <section class="gallerypics">
+                                                <img src="images/SandcutterPort.png">
+                                                <h4>Sandcutter Port</h4>
+                                                <p>As one of the most populated port cities, Sandcutter Port resides within the Gulf of Tyldor within the continent Byzenir. It's beautiful mountainous cliffs, golden white sands, crystal clear water, and intricate architecture truly make it a sight to behold, as many people travel across the globe here for a serene retreat. Being far south enough under the equator and built over the sea, the warm climate makes living conditions near perfect. Sandcutter Port also holds great historical value, as this city served as a meeting point for a war council hundreds of years ago. The ancient ruins and structures are seen as a prized relic of the past, bringing even more tourists and history buffs to the location. </p>
+                                            </section>
+                                            <section class="gallerypics">
+                                                <img src="images/SkywardCastle.png">
+                                                <h4>Skyward Castle</h4>
+                                                <p>A levitating city above the clouds, Skyward Castle is held aloft by the powers of those who are adept with the element of wind. The beautiful city consists of dozens of islands, each varying in size. Massive waterfalls flow from endless springs, and montane forests and gardens thrive, allowing the residents to live peacefully above the world below. Though visitors are vary sparse, as they would need some sort of flight to even reach the city, they are always welcomed with open arms, the residents showing great courtesy and politeness to their guests. </p>
+                                            </section>
+                                            <section class="gallerypics">
+                                                <img src="images/VerilSpires.png">
+                                                <h4>Veril Spires</h4>
+                                                <p>Widely thought of as the secondary capitol of Veriloft, the Veril Spires are an unimaginable sight to see. Dozens of large, spiraling stone pillars with cities built into the corkscrew-like terrain dot the Crystal Sea along its southeast coast. Additionally, below the massive spires, many smaller islands rise above the sea, hosting small residential and market areas, as well as defensive bunkers. Due to the sheer size of the spires, it makes for an incredible defensive counter, as a naval incursion is nearly impossible here, and the spire's range covers the closest coastline to Veriloft's capitol.</p>
+                                            </section>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <div class="smallright">
+                        <div class="flex-container">
+                            <div class="pageportal">
+                                <table>
+                                    <div class="pageportalitems">
+                                        <div class="flex-container">
+                                            <section>
+                                                <table class="bottomdiscord">
+                                                    <tr><th>Arconia Discord</th></tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#"><img src="images/discordlogo.png"></a>
+                                                            <p>Join the World of Arconia's Discord! It has the developers of the setting, early access to new content, announcements/updates, and more!</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </section>
+                                            <section>
+                                                <table class="bottomstaff">
+                                                    <tr><th>Staff</th></tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h4>Creators</h4>
+                                                            <p class="user">Collin / Dacrafter1</p>
+                                                            <h4>Admins</h4>
+                                                            <p class="user">Collin / Dacrafter1</p>
+                                                            <h4>Mapmakers</h4>
+                                                            <p class="user">Collin / Dacrafter1</p>
+                                                            <h4>Editors</h4>
+                                                            <p class="user">Collin / Dacrafter1</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottommobilestuff">
+                    <div class="flex-container">
+                        <div class="column example">
+                            <section class="bottomdiscord">
+                                <table>
+                                    <tr><th>Arconia Discord</th></tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#"><img src="images/discordlogo.png"></a>
+                                            <p>Join the World of Arconia's Discord! It has the developers of the setting, early access to new content, announcements/updates, and more!</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </section>
+                            <section class="bottomstaff">
+                                <table>
+                                    <tr><th>Staff</th></tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Creators</h4>
+                                            <p class="user">Collin / Dacrafter1</p>
+                                            <h4>Admins</h4>
+                                            <p class="user">Collin / Dacrafter1</p>
+                                            <h4>Mapmakers</h4>
+                                            <p class="user">Collin / Dacrafter1</p>
+                                            <h4>Editors</h4>
+                                            <p class="user">Collin / Dacrafter1</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <p>&copy; Collin Floyd / Dacrafter1</p>
+            </footer>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
